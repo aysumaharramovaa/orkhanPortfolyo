@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 const projects = [
   {
@@ -272,7 +273,7 @@ export default function Portfolio() {
                 title="Instagram postuna bax"
                 style={{ backgroundColor: "#FDF5AA" }}
               >
-                <img
+                <Image
                   src={project.imageUrl}
                   alt={project.name}
                   className="rounded-md mb-4 w-full object-cover"
@@ -377,32 +378,32 @@ export default function Portfolio() {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          <img
+          <Image
             src="/sup1.jpg"
             alt="sup 1"
             className="w-full h-auto rounded-lg"
           />
-          <img
+          <Image  
             src="/sup2.jpg"
             alt="sup 2"
             className="w-full h-auto rounded-lg"
           />
-          <img
+          <Image
             src="/sup3.jpg"
             alt="sup 3"
             className="w-full h-auto rounded-lg"
           />
-          <img
+          <Image
             src="/sup4.jpg"
             alt="sup 4"
             className="w-full h-auto rounded-lg"
           />
-          <img
+          <Image
             src="/sup5.jpg"
             alt="sup 5"
             className="w-full h-auto rounded-lg"
           />
-          <img
+          <Image
             src="/sup6.jpg"
             alt="sup 6"
             className="w-full h-auto rounded-lg"
@@ -410,7 +411,7 @@ export default function Portfolio() {
         </div>
 
         <div className="w-full h-screen flex items-center justify-center p-5">
-          <img
+          <Image
             src="/tapmaca.jpg"
             alt="Tapmaca"
             className="max-w-full max-h-full object-contain"
@@ -418,17 +419,17 @@ export default function Portfolio() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          <img
+          <Image
             src="/tapmaca (1).jpg"
             alt="tapmaca 1"
             className="w-full h-auto rounded-lg"
           />
-          <img
+          <Image
             src="/tapmaca (2).jpg"
             alt="tapmaca 2"
             className="w-full h-auto rounded-lg"
           />
-          <img
+          <Image
             src="/tapmaca (3).jpg"
             alt="tapmaca 3"
             className="w-full h-auto rounded-lg"
