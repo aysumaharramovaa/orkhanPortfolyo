@@ -108,110 +108,89 @@ const slides = [
 ];
 
 const slides1 = [
-    {
-      title: "NƏSƏ Səyahət Üçün Ürəyin Gedir, Çünki...",
-      info: "",
-    },
-    {
-      title: "Ağız təamın artıq dəyişir",
-      info: "Hər gün eyni dad? Yeni ölkələr və mətbəxlər ilə həm ağız təamını dəyişə, həm də rahat istirahət edə bilərsən.",
-    },
-    {
-      title: "Ekzotik toy səni gözləyir",
-      info: "Ən vacib günündə “Bəli” demək üçün sadəcə bir zal, dekor və musiqi deyil, unudulmaz səyahət planı da seçmək olar. Axı havadan sevgi qoxusu gəlir.",
-    },
-    {
-      title: "Netflix gözləyə bilər, dəniz isə yox  (İnteqrasiya)",
-      info: "İstirahət yalnız Netflix və yataq deyil. Özünü günəşin, dənizin və sükutun qucağına ataraq xoşbəxtliyə sadəcə bir bilet uzaqlığda ola bilərsən.",
-    },
-    {
-      title: "Bəzən qohumları qısqandırmaq lazımdı",
-      info: "Harda olduğun və hara getdiyinlə tez-tez maraqlanan qohumları təəccübləndirmək vaxtıdır. Sərin dəniz, isti qum və bir story paylaşımı.",
-    },
-    {
-      title: "Xatirələri bir araya topla",
-      info: "Bəzən sadəcə bir günün izi və soyuducunun üstündəki bir şəkil belə səni gülümsədə bilər. Maqnitlə yapışdırılmış o anlar isə keçmişdən gələn ən gözəl xatirədir.",
-    },
-    {
-      title: "Gün batımı burdan başqa görünür",
-      info: "Bəlkə də eyni günəşdir, amma başqa bir yerdə batanda daha fərqli hiss etdirir.",
-    },
-    {
-      title: "Şəhər səninlə dəyişmir, amma səni dəyişir",
-      info: "Hər gün eyni yerə gedirsən, amma içində nəsə solur. Bəzən yenilik üçün sən yox, getdiyin yer dəyişməlidir.",
-    },
-    {
-      title: "Offline olmağa dəyər",
-      info: "Bəzən sadəcə problemlərdən uzaqlaşaraq sakitliyə çəkilmək kifayətdir. Bu sakitliyin açarı isə yanına aldığın bir kitab və ən sevdiyin qəhvədə gizlənir.",
-    },
-    {
-      title: "Arzuların səni gözləyir (Birbaşa İnteqrasiya)",
-      info: "Səyahət etmək üçün dişlərini çox sıxdın və nəhayət bu artıq reallaşır. Çamadanın çoxdan hazırdır, playlist düzülüb, gedəcəyin şəhərin xəritəsi əzbərlənib. İndi isə təkcə bir addım qalır: ən sərfəli bileti tapmaq. Bunun üçün Aviasales var — çünki arzularına gedən yol bəzən sadəcə bir klik uzaqlıqda olur.",
-    },
-  ];
+  {
+    title: "NƏSƏ Səyahət Üçün Ürəyin Gedir, Çünki...",
+    info: "",
+  },
+  {
+    title: "Ağız təamın artıq dəyişir",
+    info: "Hər gün eyni dad? Yeni ölkələr və mətbəxlər ilə həm ağız təamını dəyişə, həm də rahat istirahət edə bilərsən.",
+  },
+  {
+    title: "Ekzotik toy səni gözləyir",
+    info: "Ən vacib günündə “Bəli” demək üçün sadəcə bir zal, dekor və musiqi deyil, unudulmaz səyahət planı da seçmək olar. Axı havadan sevgi qoxusu gəlir.",
+  },
+  {
+    title: "Netflix gözləyə bilər, dəniz isə yox  (İnteqrasiya)",
+    info: "İstirahət yalnız Netflix və yataq deyil. Özünü günəşin, dənizin və sükutun qucağına ataraq xoşbəxtliyə sadəcə bir bilet uzaqlığda ola bilərsən.",
+  },
+  {
+    title: "Bəzən qohumları qısqandırmaq lazımdı",
+    info: "Harda olduğun və hara getdiyinlə tez-tez maraqlanan qohumları təəccübləndirmək vaxtıdır. Sərin dəniz, isti qum və bir story paylaşımı.",
+  },
+  {
+    title: "Xatirələri bir araya topla",
+    info: "Bəzən sadəcə bir günün izi və soyuducunun üstündəki bir şəkil belə səni gülümsədə bilər. Maqnitlə yapışdırılmış o anlar isə keçmişdən gələn ən gözəl xatirədir.",
+  },
+  {
+    title: "Gün batımı burdan başqa görünür",
+    info: "Bəlkə də eyni günəşdir, amma başqa bir yerdə batanda daha fərqli hiss etdirir.",
+  },
+  {
+    title: "Şəhər səninlə dəyişmir, amma səni dəyişir",
+    info: "Hər gün eyni yerə gedirsən, amma içində nəsə solur. Bəzən yenilik üçün sən yox, getdiyin yer dəyişməlidir.",
+  },
+  {
+    title: "Offline olmağa dəyər",
+    info: "Bəzən sadəcə problemlərdən uzaqlaşaraq sakitliyə çəkilmək kifayətdir. Bu sakitliyin açarı isə yanına aldığın bir kitab və ən sevdiyin qəhvədə gizlənir.",
+  },
+  {
+    title: "Arzuların səni gözləyir (Birbaşa İnteqrasiya)",
+    info: "Səyahət etmək üçün dişlərini çox sıxdın və nəhayət bu artıq reallaşır. Çamadanın çoxdan hazırdır, playlist düzülüb, gedəcəyin şəhərin xəritəsi əzbərlənib. İndi isə təkcə bir addım qalır: ən sərfəli bileti tapmaq. Bunun üçün Aviasales var — çünki arzularına gedən yol bəzən sadəcə bir klik uzaqlıqda olur.",
+  },
+];
 
-   const reasons = [
-    {
-      title: "Özünü yaxşı tanımırsan",
-      info: "Nə istədiyini bilmirsən, hədəflərin yoxdur. Düşündükcə fikirlərin arasında itirsən. Sənə nə lazım olduğunu düşünmək belə yorur. Uzaq durmaq ən yaxşı alternativdir sanırsan. Ona görə heç nə etmirsən.",
-    },
-    {
-      title: "Bir dəfə sınadın, alınmadı",
-      info: "Və bu bir dəfə sənin üçün kifayət etdi. İndi yenidən başlamaq fikri səni həm qorxudur, həm də bezdirir. Elə düşünürsən ki, həvəsin təkrar qırılacaq. İçində yenidən başlayacaq cəsarət qıvılcımını tapmırsan.",
-    },
-    {
-      title: "Motivasiyan yoxdu",
-      info: "Özünü tənbəl, iradəsiz, həvəsiz biri kimi görürsən. Gözləyirsən ki, bir gün içindən bir enerji gəlsin, hər şeyi dəyişdirəcək bir “klik” olsun. Amma o gözlədikcə gəlmir. Günlər keçir, dəyişən bir şey olmur. Motivasiya üçün hədəflər, səni addımladacaq məqsədlər olmalıdır. Sənsə bunlara sahib olmaq belə istəmirsən.",
-    },
-    {
-      title: "Hələ “vaxtı deyil” deyə düşünürsən",
-      info: "Əslində tam vaxtıdır. Telefonda gündə 5 saat, düşüncələrdə isə 10 saat keçirirsən. Sadəcə real addım atmaq istəmirsən. Çünki içində bir yer bilir ki, o addım hər şeyi dəyişə bilər. Həyatının tempi tamam fərqli şəkildə irəliləyə bilər. Və sən buna hazır hiss etmirsən.",
-    },
-    {
-      title: "Sənə “inanıram” deyən olmayıb",
-      info: "Heç kim sənin potensialını görməyib. Hətta özün belə fərqində deyilsən. Kiminsə bir dəfə “sən edə bilərsən” deməsi bəlkə də hər şeyi dəyişərdi. Amma o söz heç vaxt gəlməyib. Bəzən özgüvənli olmaq həqiqətən həyatı asanlaşdırır.",
-    },
-    {
-      title: "Zamanı düzgün bölə bilmirsən",
-      info: "Görməli olduğun işlər çoxdur. Hər şeyi birdən etməyə çalışırsan. Fikirlərin bir-birinə dəyir, enerjin boşa dağılıb gedir. Birini etməyə qərar verdikdə, digər şeylər haqda nigaran qalırsan.",
-    },
-    {
-      title: "Qorxursan",
-      info: "Sənə elə gəlir ki, sən geridə qalmısan. Dünya sanki axırıncı qatara minib gedib. Sən isə dayanacaqda oturub baxırsan. Amma özünün fərqinə varmalı və başlamalısan.",
-    },
-    {
-      title: "Özünü itirmisən",
-      info: "Çox fikirləşmisən, çox hiss etmisən, çox susmusan. İndi isə nə düşünəcəyini, nə hiss edəcəyini bilmirsən. Ətraf sakitdir. İçin isə doludur. Və sən bu doluluqda nə edəcəyini bilmədiyindən eləcə dayanırsan.",
-    },
-    {
-      title: "Məntiqinlə hisslərin toqquşur",
-      info: "Qəlbinin səsinimi yoxsa məntiqinimi dinləməli olduğunu bilmirsən. Sanki içində iki insan var və hər birinin istəkləri başqadı. Həyatı axışına buraxa bilmədiyindən ortada qalmısan. Amma artıq seçim etmək vaxtıdır.",
-    },
-  ];
+const reasons = [
+  {
+    title: "Özünü yaxşı tanımırsan",
+    info: "Nə istədiyini bilmirsən, hədəflərin yoxdur. Düşündükcə fikirlərin arasında itirsən. Sənə nə lazım olduğunu düşünmək belə yorur. Uzaq durmaq ən yaxşı alternativdir sanırsan. Ona görə heç nə etmirsən.",
+  },
+  {
+    title: "Bir dəfə sınadın, alınmadı",
+    info: "Və bu bir dəfə sənin üçün kifayət etdi. İndi yenidən başlamaq fikri səni həm qorxudur, həm də bezdirir. Elə düşünürsən ki, həvəsin təkrar qırılacaq. İçində yenidən başlayacaq cəsarət qıvılcımını tapmırsan.",
+  },
+  {
+    title: "Motivasiyan yoxdu",
+    info: "Özünü tənbəl, iradəsiz, həvəsiz biri kimi görürsən. Gözləyirsən ki, bir gün içindən bir enerji gəlsin, hər şeyi dəyişdirəcək bir “klik” olsun. Amma o gözlədikcə gəlmir. Günlər keçir, dəyişən bir şey olmur. Motivasiya üçün hədəflər, səni addımladacaq məqsədlər olmalıdır. Sənsə bunlara sahib olmaq belə istəmirsən.",
+  },
+  {
+    title: "Hələ “vaxtı deyil” deyə düşünürsən",
+    info: "Əslində tam vaxtıdır. Telefonda gündə 5 saat, düşüncələrdə isə 10 saat keçirirsən. Sadəcə real addım atmaq istəmirsən. Çünki içində bir yer bilir ki, oaddım hər şeyi dəyişə bilər. Həyatının tempi tamam fərqli şəkildə irəliləyə bilər. Və sən buna hazır hiss etmirsən.",
+  },
+  {
+    title: "Sənə “inanıram” deyən olmayıb",
+    info: "Heç kim sənin potensialını görməyib. Hətta özün belə fərqində deyilsən. Kiminsə bir dəfə “sən edə bilərsən” deməsi bəlkə də hər şeyi dəyişərdi. Amma o söz heç vaxt gəlməyib. Bəzən özgüvənli olmaq həqiqətən həyatı asanlaşdırır.",
+  },
+  {
+    title: "Zamanı düzgün bölə bilmirsən",
+    info: "Görməli olduğun işlər çoxdur. Hər şeyi birdən etməyə çalışırsan. Fikirlərin bir-birinə dəyir, enerjin boşa dağılıb gedir. Birini etməyə qərar verdikdə, digər şeylər haqda nigaran qalırsan.",
+  },
+  {
+    title: "Qorxursan",
+    info: "Sənə elə gəlir ki, sən geridə qalmısan. Dünya sanki axırıncı qatara minib gedib. Sən isə dayanacaqda oturub baxırsan. Amma özünün fərqinə varmalı və başlamalısan.",
+  },
+  {
+    title: "Özünü itirmisən",
+    info: "Çox fikirləşmisən, çox hiss etmisən, çox susmusan. İndi isə nə düşünəcəyini, nə hiss edəcəyini bilmirsən. Ətraf sakitdir. İçin isə doludur. Və sən bu doluluqda nə edəcəyini bilmədiyindən eləcə dayanırsan.",
+  },
+  {
+    title: "Məntiqinlə hisslərin toqquşur",
+    info: "Qəlbinin səsinimi yoxsa məntiqinimi dinləməli olduğunu bilmirsən. Sanki içində iki insan var və hər birinin istəkləri başqadı. Həyatı axışına buraxa bilmədiyindən ortada qalmısan. Amma artıq seçim etmək vaxtıdır.",
+  },
+];
 
 export default function Portfolio() {
   const [isPaused, setIsPaused] = useState(false);
-  const [openMainId, setOpenMainId] = useState<number | null>(null);
-  const [openSlideIds, setOpenSlideIds] = useState<{ [key: number]: boolean }>(
-    {}
-  );
-
-  const toggleMain = (id: number) => {
-    if (openMainId === id) {
-      setOpenMainId(null);
-      setOpenSlideIds({});
-    } else {
-      setOpenMainId(id);
-      setOpenSlideIds({});
-    }
-  };
-
-  const toggleSlide = (id: number) => {
-    setOpenSlideIds((prev) => ({
-      ...prev,
-      [id]: !prev[id],
-    }));
-  };
 
   function handleClick(instagramLink: string) {
     window.open(instagramLink, "_blank");
@@ -276,6 +255,8 @@ export default function Portfolio() {
                 <Image
                   src={project.imageUrl}
                   alt={project.name}
+                  width={250}
+                  height={250}
                   className="rounded-md mb-4 w-full object-cover"
                 />
                 <p className="font-semibold">- {project.name}</p>
@@ -301,7 +282,6 @@ export default function Portfolio() {
             }
           `}</style>
         </section>
-
 
         <section className="max-w-7xl mx-auto px-4 py-10">
           <h2 className="text-4xl font-bold mb-10 text-center">
@@ -339,73 +319,91 @@ export default function Portfolio() {
           </div>
         </section>
 
-         <section className="max-w-7xl mx-auto px-4 py-10">
-      <h2 className="text-4xl font-bold mb-10 text-center">25TREND x Aviasales</h2>
-      <h3 className="text-2xl font-semibold mb-6 text-center text-[#ededed]">
-        Bakıda səyahət və kəşf ediləcək möhtəşəm anlar ✈️
-      </h3>
+        <section className="max-w-7xl mx-auto px-4 py-10">
+          <h2 className="text-4xl font-bold mb-10 text-center">
+            25TREND x Aviasales
+          </h2>
+          <h3 className="text-2xl font-semibold mb-6 text-center text-[#ededed]">
+            Bakıda səyahət və kəşf ediləcək möhtəşəm anlar ✈️
+          </h3>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {slides1.map(({ title, info }, idx) => (
-          <div
-            key={idx}
-            className="border rounded-lg p-6 shadow hover:shadow-lg transition cursor-pointer"
-          >
-            <h4 className="text-xl font-semibold mb-3">{title}</h4>
-            {info && <p className="text-[#D2C1B6]">{info}</p>}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {slides1.map(({ title, info }, idx) => (
+              <div
+                key={idx}
+                className="border rounded-lg p-6 shadow hover:shadow-lg transition cursor-pointer"
+              >
+                <h4 className="text-xl font-semibold mb-3">{title}</h4>
+                {info && <p className="text-[#D2C1B6]">{info}</p>}
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
 
-      <div className="mt-14 text-center max-w-xl mx-auto">
-        <p className="text-lg mb-4">
-          Bəs sən neçə vaxtdır xəritəyə baxıb köçmək istədiyin ölkəni izləyirsən? 🌍
-        </p>
-        <p className=" mb-6 text-[#ededed]">
-          Xəyallarını gerçəkləşdirmək üçün addım atmaq lazımdır. Bəlkə də bu postu görmək o “birinci
-          addım”ın özü idi. Arzularına qovuşmaq üçün lazım olan tək şey Aviasales-də uyğun bileti
-          tapmaqdır. Sonra çamadan, pasport, story və səni gözləyən komforlu bir səyahət. 🤠
-        </p>
-        <p className="text-indigo-600 font-semibold text-lg">25TREND x Aviasales</p>
-      </div>
-    </section>
-
-  
+          <div className="mt-14 text-center max-w-xl mx-auto">
+            <p className="text-lg mb-4">
+              Bəs sən neçə vaxtdır xəritəyə baxıb köçmək istədiyin ölkəni
+              izləyirsən? 🌍
+            </p>
+            <p className=" mb-6 text-[#ededed]">
+              Xəyallarını gerçəkləşdirmək üçün addım atmaq lazımdır. Bəlkə də bu
+              postu görmək o “birinci addım”ın özü idi. Arzularına qovuşmaq üçün
+              lazım olan tək şey Aviasales-də uyğun bileti tapmaqdır. Sonra
+              çamadan, pasport, story və səni gözləyən komforlu bir səyahət. 🤠
+            </p>
+            <p className="text-indigo-600 font-semibold text-lg">
+              25TREND x Aviasales
+            </p>
+          </div>
+        </section>
 
         <h2 className="text-3xl font-bold text-center my-8">
-          <span className="block md:inline">Projects I've worked on at</span>{" "}
-          <b className="block md:inline">'ArxaParta'</b>
+          <span className="block md:inline">
+            Projects I&apos;ve worked on at
+          </span>{" "}
+          <b className="block md:inline">&#39;ArxaParta&#39;</b>
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           <Image
             src="/sup1.jpg"
             alt="sup 1"
+            width={400}
+            height={300}
             className="w-full h-auto rounded-lg"
           />
-          <Image  
+          <Image
             src="/sup2.jpg"
             alt="sup 2"
+            width={400}
+            height={300}
             className="w-full h-auto rounded-lg"
           />
           <Image
             src="/sup3.jpg"
             alt="sup 3"
+            width={400}
+            height={300}
             className="w-full h-auto rounded-lg"
           />
           <Image
             src="/sup4.jpg"
             alt="sup 4"
+            width={400}
+            height={300}
             className="w-full h-auto rounded-lg"
           />
           <Image
             src="/sup5.jpg"
             alt="sup 5"
+            width={400}
+            height={300}
             className="w-full h-auto rounded-lg"
           />
           <Image
             src="/sup6.jpg"
             alt="sup 6"
+            width={400}
+            height={300}
             className="w-full h-auto rounded-lg"
           />
         </div>
@@ -415,6 +413,8 @@ export default function Portfolio() {
             src="/tapmaca.jpg"
             alt="Tapmaca"
             className="max-w-full max-h-full object-contain"
+            width={800}
+            height={300}
           />
         </div>
 
@@ -423,51 +423,59 @@ export default function Portfolio() {
             src="/tapmaca (1).jpg"
             alt="tapmaca 1"
             className="w-full h-auto rounded-lg"
+            width={400}
+            height={300}
           />
           <Image
             src="/tapmaca (2).jpg"
             alt="tapmaca 2"
             className="w-full h-auto rounded-lg"
+            width={400}
+            height={300}
           />
           <Image
             src="/tapmaca (3).jpg"
             alt="tapmaca 3"
             className="w-full h-auto rounded-lg"
+            width={400}
+            height={300}
           />
         </div>
       </div>
 
-         <section className="max-w-6xl mx-auto px-4 py-10">
-      <h2 className="text-4xl font-bold mb-8 text-center">
-        NƏSƏ Etmək Üçün Heç Nə Etmirsən, Çünki...
-      </h2>
-      
-     <div className="bg-[#113F67] min-h-screen py-12 px-6">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-    {reasons.map(({ title, info }, i) => (
-      <div
-        key={i}
-        className={`p-6 rounded-lg shadow-lg cursor-pointer transition
+      <section className="max-w-6xl mx-auto px-4 py-10">
+        <h2 className="text-4xl font-bold mb-8 text-center">
+          NƏSƏ Etmək Üçün Heç Nə Etmirsən, Çünki...
+        </h2>
+
+        <div className="bg-[#113F67] min-h-screen py-12 px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {reasons.map(({ title, info }, i) => (
+              <div
+                key={i}
+                className={`p-6 rounded-lg shadow-lg cursor-pointer transition
           ${i % 2 === 0 ? "bg-[#D2C1B6]" : "bg-[#F9F3EF]"}`}
-      >
-        <h3 className="text-[#1B3C53] text-xl font-semibold mb-3">{title}</h3>
-        <p className="text-[#1B3C53]">{info}</p>
-      </div>
-    ))}
-  </div>
-</div>
+              >
+                <h3 className="text-[#1B3C53] text-xl font-semibold mb-3">
+                  {title}
+                </h3>
+                <p className="text-[#1B3C53]">{info}</p>
+              </div>
+            ))}
+          </div>
+        </div>
 
-
-      <div className="mt-12 max-w-xl mx-auto text-center">
-        <p className="text-lg font-semibold mb-2">
-          NƏSƏ etməlisən, amma heç cürə başlaya bilmirsən?
-        </p>
-        <p className="text-[#D2C1B6] dark:text-gray-200">
-          Heç nə etmirsən, amma niyə etmədiyini də tam bilmirsən. Səbəbləri var. Əslində hamımızda var. Sadəcə bunlara ilişib qalmaq bizi daha da, geri atır. Bu post - sən tərpənənə qədər sənin yerinə danışacaq.
-        </p>
-      </div>
-    </section>
-
+        <div className="mt-12 max-w-xl mx-auto text-center">
+          <p className="text-lg font-semibold mb-2">
+            NƏSƏ etməlisən, amma heç cürə başlaya bilmirsən?
+          </p>
+          <p className="text-[#D2C1B6] dark:text-gray-200">
+            Heç nə etmirsən, amma niyə etmədiyini də tam bilmirsən. Səbəbləri
+            var. Əslində hamımızda var. Sadəcə bunlara ilişib qalmaq bizi daha
+            da, geri atır. Bu post - sən tərpənənə qədər sənin yerinə danışacaq.
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
