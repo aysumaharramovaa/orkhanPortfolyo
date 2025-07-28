@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Orkhan Gurbanli",
   description: "Portfolyo",
+    icons: {
+    icon: "/favicon.jpg",
+  },
 };
 
 export default function RootLayout({
