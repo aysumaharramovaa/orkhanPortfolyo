@@ -227,8 +227,7 @@ export default function Portfolio() {
 				</div>
 
 				<h2 className="text-3xl font-bold text-center my-8">
-					Content stories created for <b>'25TREND'</b>
-
+					Content stories created for <b>25TREND</b>
 				</h2>
 
 				<section
@@ -358,7 +357,7 @@ export default function Portfolio() {
 					<span className="block md:inline">
 					  Powerful stories told through words
 					</span>{" "}
-					<b className="block md:inline">&#39;ArxaParta&#39;</b>
+					<b className="block md:inline">ArxaParta</b>
 				</h2>
 
 				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
