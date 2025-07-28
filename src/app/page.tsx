@@ -78,7 +78,7 @@ const slides = [
 		info: "Tıxacdan nəfəsimizin kəsildiyi şəhərdə velosiped bir nəqliyyat yox, bir xilas yoludur. Həm cibə qənaət edə bilərsən, həm də dostuna “beş dəqiqəyə ordayam” sözünün həqiqi versiyasını yaşada bilərsən.",
 	},
 	{
-		title: "Şəhəri qarış-qarış gəzmək (İnteqrasiya)",
+		title: "Şəhəri qarış-qarış gəzmək",
 		info: "Maşın keçməyən dar keçidlər, məhəllə arası yollarla fərqinə belə varmadığın məkanları kəşf edə bilərsən. Düzgün velosipedi seçmək isə məhz bizim əlimizdədir.",
 	},
 	{
@@ -98,20 +98,16 @@ const slides = [
 		info: "Axı əzələ yandırmaq üçün idman zalları şərt deyil. Şəhərin özü sənin məşq meydanın ola bilər.",
 	},
 	{
-		title: "Saatlıq icarə verərək pul qazanmaq (batdı) (İnteqrasiya)",
+		title: "Saatlıq icarə verərək pul qazanmaq (batdı) ",
 		info: "Sürmədiyin saatlarda velosiped işləsə necə olar? Yaxşı fikirdir, amma nəzərə almalısan ki, sektorda da yekamonlar çoxdur.",
 	},
 	{
-		title: "Spontan gəzintilər etmək (Birbaşa İnteqrasiya)",
+		title: "Spontan gəzintilər etmək",
 		info: "Heç bir planı qurulmamış o səhərin ən gözəl versiyası məhz budur. Bunun üçün isə “APAR Ride”ın aylıq abunəlik paketləri ilə nə vaxt istəsən, o an yola çıxa bilərsən.",
 	},
 ];
 
 const slides1 = [
-	{
-		title: "NƏSƏ Səyahət Üçün Ürəyin Gedir, Çünki...",
-		info: "",
-	},
 	{
 		title: "Ağız təamın artıq dəyişir",
 		info: "Hər gün eyni dad? Yeni ölkələr və mətbəxlər ilə həm ağız təamını dəyişə, həm də rahat istirahət edə bilərsən.",
@@ -145,7 +141,7 @@ const slides1 = [
 		info: "Bəzən sadəcə problemlərdən uzaqlaşaraq sakitliyə çəkilmək kifayətdir. Bu sakitliyin açarı isə yanına aldığın bir kitab və ən sevdiyin qəhvədə gizlənir.",
 	},
 	{
-		title: "Arzuların səni gözləyir (Birbaşa İnteqrasiya)",
+		title: "Arzuların səni gözləyir",
 		info: "Səyahət etmək üçün dişlərini çox sıxdın və nəhayət bu artıq reallaşır. Çamadanın çoxdan hazırdır, playlist düzülüb, gedəcəyin şəhərin xəritəsi əzbərlənib. İndi isə təkcə bir addım qalır: ən sərfəli bileti tapmaq. Bunun üçün Aviasales var — çünki arzularına gedən yol bəzən sadəcə bir klik uzaqlıqda olur.",
 	},
 ];
@@ -288,17 +284,20 @@ export default function Portfolio() {
 						Bakıda velosipedlə edilə biləcək şeylər 🚴
 					</h3>
 
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-						{slides.map(({ title, info }, idx) => (
-							<div
-								key={idx}
-								className="border rounded-lg p-6 shadow hover:shadow-lg transition cursor-pointer"
-							>
-								<h4 className="text-xl font-semibold mb-3">{title}</h4>
-								<p className="text-[#D2C1B6]">{info}</p>
-							</div>
-						))}
-					</div>
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  {slides.map(({ title, info }, idx) => (
+    <div
+      key={idx}
+      className="bg-gradient-to-br from-[#456882] to-[#4a5a67] border border-[#4a5a67] rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out group cursor-pointer"
+    >
+      <h4 className="text-2xl font-bold mb-3 text-white group-hover:text-[#b3ada8] transition">
+        {title}
+      </h4>
+      <p className="text-[#cfcbc7] group-hover:text-[#f0eeeb] transition">{info}</p>
+    </div>
+  ))}
+</div>
+
 
 					<div className="mt-14 text-center max-w-xl mx-auto">
 						<p className="text-lg mb-4">
@@ -321,20 +320,23 @@ export default function Portfolio() {
 						25TREND x Aviasales
 					</h2>
 					<h3 className="text-2xl font-semibold mb-6 text-center text-[#ededed]">
-						Bakıda səyahət və kəşf ediləcək möhtəşəm anlar ✈️
+						Bakıda səyahət və kəşf ediləcək möhtəşəm anlar ✈️ <br />
+            NƏSƏ Səyahət Üçün Ürəyin Gedir, Çünki...
 					</h3>
 
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-						{slides1.map(({ title, info }, idx) => (
-							<div
-								key={idx}
-								className="border rounded-lg p-6 shadow hover:shadow-lg transition cursor-pointer"
-							>
-								<h4 className="text-xl font-semibold mb-3">{title}</h4>
-								{info && <p className="text-[#D2C1B6]">{info}</p>}
-							</div>
-						))}
-					</div>
+
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  {slides1.map(({ title, info }, idx) => (
+    <div
+      key={idx}
+      className="bg-[#456882] border border-[#D2C1B6]/20 rounded-2xl p-6 shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer text-[#F9F3EF]"
+    >
+      <h4 className="text-xl font-bold mb-3 text-[#F9F3EF]">{title}</h4>
+      {info && <p className="text-sm leading-relaxed text-[#D2C1B6]">{info}</p>}
+    </div>
+  ))}
+</div>
+
 
 					<div className="mt-14 text-center max-w-xl mx-auto">
 						<p className="text-lg mb-4">
