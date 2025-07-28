@@ -67,62 +67,126 @@ const projects = [
   },
 ];
 
-const data = [
+const slides = [
   {
-    id: 1,
-    title: "25TREND x APAR RIDE",
-    slides: [
-      {
-        id: 1,
-        subtitle: "Kuryer işləmək",
-        info: "İnfo : Nə beyninin ətini yeyən o müdürə, nə də hər səhər ütülənməli olan kostyuma ehtiyacın var. Pul qazanmağın ən sərbəst, ən pedallı versiyası budur.",
-      },
-      {
-        id: 2,
-        subtitle: "Tıxacdan qaçmaq (yenə tıxacdayam)",
-        info: " İnfo : Tıxacdan nəfəsimizin kəsildiyi şəhərdə velosiped bir nəqliyyat yox, bir xilas yoludur. Həm cibə qənaət edə bilərsən, həm də dostuna “beş dəqiqəyə ordayam” sözünün həqiqi versiyasını yaşada bilərsən.",
-      },
-      {
-        id: 3,
-        subtitle: "Şəhəri qarış-qarış gəzmək (İnteqrasiya)",
-        info: "İnfo : Maşın keçməyən dar keçidlər, məhəllə arası yollarla fərqinə belə varmadığın məkanları kəşf edə bilərsən. Düzgün velosipedi seçmək isə məhz bizim əlimizdədir.",
-      },
-       {
-        id: 4,
-        subtitle: "Stressini azaltmaq ",
-        info: "İnfo : Yorğun bir iş həftəsinin yükünü ruhunu daha da çərçivəyə salmadan, yavaş-yavaş, pedalla azalda bilərsən. Qulağında isə həmin o musiqi.",
-      },
-       {
-        id: 5,
-        subtitle: "Sevgilinlə romantik anlar yaşamaq (ayrıldı)",
-        info: "İnfo : “Görüşəndə hara gedək?” sualına ən rahat cavabı məhz budur. Əmin ol, klassik axşam yeməyi formatından bu dəfə daha uzaqda olacaqsan.",
-      },
-      {
-        id: 6,
-        subtitle: "Dostlarla birlikdə yarışmaq ",
-        info: "İnfo : Söhbət Formula 1-dən getməsə də, dostlarını bu dəfə həqiqətən qabağına ala bilərsən. Həyəcan və əyləncə məhz yanında olan o beyinsiz ilə daha ləzzətli olacaq.",
-      },
-      {
-        id: 7,
-        subtitle: "Fiziki məşq etmək",
-        info: "İnfo : Axı əzələ yandırmaq üçün idman zalları şərt deyil. Şəhərin özü sənin məşq meydanın ola bilər. ",
-      },
-      {
-        id: 8,
-        subtitle: "Saatlıq icarə verərək pul qazanmaq (batdı) (İnteqrasiya)",
-        info: "İnfo : Sürmədiyin saatlarda velosiped işləsə necə olar? Yaxşı fikirdir, amma nəzərə almalısan ki, sektorda da yekamonlar çoxdur. ",
-      },
-       {
-        id: 9,
-        subtitle: "Spontan gəzintilər etmək (Birbaşa İnteqrasiya) ",
-        info: "İnfo : Heç bir planı qurulmamış o səhərin ən gözəl versiyası məhz budur. Bunun üçün isə “APAR Ride”ın aylıq abunəlik paketləri ilə nə vaxt istəsən, o an yola çıxa bilərsən.",
-      },
-
-
-
-    ],
+    title: "Kuryer işləmək",
+    info: "Nə beyninin ətini yeyən o müdürə, nə də hər səhər ütülənməli olan kostyuma ehtiyacın var. Pul qazanmağın ən sərbəst, ən pedallı versiyası budur.",
+  },
+  {
+    title: "Tıxacdan qaçmaq (yenə tıxacdayam)",
+    info: "Tıxacdan nəfəsimizin kəsildiyi şəhərdə velosiped bir nəqliyyat yox, bir xilas yoludur. Həm cibə qənaət edə bilərsən, həm də dostuna “beş dəqiqəyə ordayam” sözünün həqiqi versiyasını yaşada bilərsən.",
+  },
+  {
+    title: "Şəhəri qarış-qarış gəzmək (İnteqrasiya)",
+    info: "Maşın keçməyən dar keçidlər, məhəllə arası yollarla fərqinə belə varmadığın məkanları kəşf edə bilərsən. Düzgün velosipedi seçmək isə məhz bizim əlimizdədir.",
+  },
+  {
+    title: "Stressini azaltmaq",
+    info: "Yorğun bir iş həftəsinin yükünü ruhunu daha da çərçivəyə salmadan, yavaş-yavaş, pedalla azalda bilərsən. Qulağında isə həmin o musiqi.",
+  },
+  {
+    title: "Sevgilinlə romantik anlar yaşamaq (ayrıldı)",
+    info: "“Görüşəndə hara gedək?” sualına ən rahat cavabı məhz budur. Əmin ol, klassik axşam yeməyi formatından bu dəfə daha uzaqda olacaqsan.",
+  },
+  {
+    title: "Dostlarla birlikdə yarışmaq",
+    info: "Söhbət Formula 1-dən getməsə də, dostlarını bu dəfə həqiqətən qabağına ala bilərsən. Həyəcan və əyləncə məhz yanında olan o beyinsiz ilə daha ləzzətli olacaq.",
+  },
+  {
+    title: "Fiziki məşq etmək",
+    info: "Axı əzələ yandırmaq üçün idman zalları şərt deyil. Şəhərin özü sənin məşq meydanın ola bilər.",
+  },
+  {
+    title: "Saatlıq icarə verərək pul qazanmaq (batdı) (İnteqrasiya)",
+    info: "Sürmədiyin saatlarda velosiped işləsə necə olar? Yaxşı fikirdir, amma nəzərə almalısan ki, sektorda da yekamonlar çoxdur.",
+  },
+  {
+    title: "Spontan gəzintilər etmək (Birbaşa İnteqrasiya)",
+    info: "Heç bir planı qurulmamış o səhərin ən gözəl versiyası məhz budur. Bunun üçün isə “APAR Ride”ın aylıq abunəlik paketləri ilə nə vaxt istəsən, o an yola çıxa bilərsən.",
   },
 ];
+
+const slides1 = [
+    {
+      title: "NƏSƏ Səyahət Üçün Ürəyin Gedir, Çünki...",
+      info: "",
+    },
+    {
+      title: "Ağız təamın artıq dəyişir",
+      info: "Hər gün eyni dad? Yeni ölkələr və mətbəxlər ilə həm ağız təamını dəyişə, həm də rahat istirahət edə bilərsən.",
+    },
+    {
+      title: "Ekzotik toy səni gözləyir",
+      info: "Ən vacib günündə “Bəli” demək üçün sadəcə bir zal, dekor və musiqi deyil, unudulmaz səyahət planı da seçmək olar. Axı havadan sevgi qoxusu gəlir.",
+    },
+    {
+      title: "Netflix gözləyə bilər, dəniz isə yox  (İnteqrasiya)",
+      info: "İstirahət yalnız Netflix və yataq deyil. Özünü günəşin, dənizin və sükutun qucağına ataraq xoşbəxtliyə sadəcə bir bilet uzaqlığda ola bilərsən.",
+    },
+    {
+      title: "Bəzən qohumları qısqandırmaq lazımdı",
+      info: "Harda olduğun və hara getdiyinlə tez-tez maraqlanan qohumları təəccübləndirmək vaxtıdır. Sərin dəniz, isti qum və bir story paylaşımı.",
+    },
+    {
+      title: "Xatirələri bir araya topla",
+      info: "Bəzən sadəcə bir günün izi və soyuducunun üstündəki bir şəkil belə səni gülümsədə bilər. Maqnitlə yapışdırılmış o anlar isə keçmişdən gələn ən gözəl xatirədir.",
+    },
+    {
+      title: "Gün batımı burdan başqa görünür",
+      info: "Bəlkə də eyni günəşdir, amma başqa bir yerdə batanda daha fərqli hiss etdirir.",
+    },
+    {
+      title: "Şəhər səninlə dəyişmir, amma səni dəyişir",
+      info: "Hər gün eyni yerə gedirsən, amma içində nəsə solur. Bəzən yenilik üçün sən yox, getdiyin yer dəyişməlidir.",
+    },
+    {
+      title: "Offline olmağa dəyər",
+      info: "Bəzən sadəcə problemlərdən uzaqlaşaraq sakitliyə çəkilmək kifayətdir. Bu sakitliyin açarı isə yanına aldığın bir kitab və ən sevdiyin qəhvədə gizlənir.",
+    },
+    {
+      title: "Arzuların səni gözləyir (Birbaşa İnteqrasiya)",
+      info: "Səyahət etmək üçün dişlərini çox sıxdın və nəhayət bu artıq reallaşır. Çamadanın çoxdan hazırdır, playlist düzülüb, gedəcəyin şəhərin xəritəsi əzbərlənib. İndi isə təkcə bir addım qalır: ən sərfəli bileti tapmaq. Bunun üçün Aviasales var — çünki arzularına gedən yol bəzən sadəcə bir klik uzaqlıqda olur.",
+    },
+  ];
+
+   const reasons = [
+    {
+      title: "Özünü yaxşı tanımırsan",
+      info: "Nə istədiyini bilmirsən, hədəflərin yoxdur. Düşündükcə fikirlərin arasında itirsən. Sənə nə lazım olduğunu düşünmək belə yorur. Uzaq durmaq ən yaxşı alternativdir sanırsan. Ona görə heç nə etmirsən.",
+    },
+    {
+      title: "Bir dəfə sınadın, alınmadı",
+      info: "Və bu bir dəfə sənin üçün kifayət etdi. İndi yenidən başlamaq fikri səni həm qorxudur, həm də bezdirir. Elə düşünürsən ki, həvəsin təkrar qırılacaq. İçində yenidən başlayacaq cəsarət qıvılcımını tapmırsan.",
+    },
+    {
+      title: "Motivasiyan yoxdu",
+      info: "Özünü tənbəl, iradəsiz, həvəsiz biri kimi görürsən. Gözləyirsən ki, bir gün içindən bir enerji gəlsin, hər şeyi dəyişdirəcək bir “klik” olsun. Amma o gözlədikcə gəlmir. Günlər keçir, dəyişən bir şey olmur. Motivasiya üçün hədəflər, səni addımladacaq məqsədlər olmalıdır. Sənsə bunlara sahib olmaq belə istəmirsən.",
+    },
+    {
+      title: "Hələ “vaxtı deyil” deyə düşünürsən",
+      info: "Əslində tam vaxtıdır. Telefonda gündə 5 saat, düşüncələrdə isə 10 saat keçirirsən. Sadəcə real addım atmaq istəmirsən. Çünki içində bir yer bilir ki, o addım hər şeyi dəyişə bilər. Həyatının tempi tamam fərqli şəkildə irəliləyə bilər. Və sən buna hazır hiss etmirsən.",
+    },
+    {
+      title: "Sənə “inanıram” deyən olmayıb",
+      info: "Heç kim sənin potensialını görməyib. Hətta özün belə fərqində deyilsən. Kiminsə bir dəfə “sən edə bilərsən” deməsi bəlkə də hər şeyi dəyişərdi. Amma o söz heç vaxt gəlməyib. Bəzən özgüvənli olmaq həqiqətən həyatı asanlaşdırır.",
+    },
+    {
+      title: "Zamanı düzgün bölə bilmirsən",
+      info: "Görməli olduğun işlər çoxdur. Hər şeyi birdən etməyə çalışırsan. Fikirlərin bir-birinə dəyir, enerjin boşa dağılıb gedir. Birini etməyə qərar verdikdə, digər şeylər haqda nigaran qalırsan.",
+    },
+    {
+      title: "Qorxursan",
+      info: "Sənə elə gəlir ki, sən geridə qalmısan. Dünya sanki axırıncı qatara minib gedib. Sən isə dayanacaqda oturub baxırsan. Amma özünün fərqinə varmalı və başlamalısan.",
+    },
+    {
+      title: "Özünü itirmisən",
+      info: "Çox fikirləşmisən, çox hiss etmisən, çox susmusan. İndi isə nə düşünəcəyini, nə hiss edəcəyini bilmirsən. Ətraf sakitdir. İçin isə doludur. Və sən bu doluluqda nə edəcəyini bilmədiyindən eləcə dayanırsan.",
+    },
+    {
+      title: "Məntiqinlə hisslərin toqquşur",
+      info: "Qəlbinin səsinimi yoxsa məntiqinimi dinləməli olduğunu bilmirsən. Sanki içində iki insan var və hər birinin istəkləri başqadı. Həyatı axışına buraxa bilmədiyindən ortada qalmısan. Amma artıq seçim etmək vaxtıdır.",
+    },
+  ];
 
 export default function Portfolio() {
   const [isPaused, setIsPaused] = useState(false);
@@ -183,8 +247,12 @@ export default function Portfolio() {
         </div>
 
         <h2 className="text-3xl font-bold text-center my-8">
-          Powerful stories told through words
+          <span className="block md:inline">Content stories</span>{" "}
+          <span className="block md:inline">
+            created for <b>'25TREND'</b>
+          </span>
         </h2>
+
         <section
           className="overflow-hidden py-10"
           onMouseEnter={() => setIsPaused(true)}
@@ -233,72 +301,172 @@ export default function Portfolio() {
           `}</style>
         </section>
 
-       <div className="max-w-3xl mx-auto p-6">
-  {data.map(({ id, title, slides }) => (
-    <div
-      key={id}
-      className="border border-gray-300 rounded-lg mb-6 bg-white dark:bg-gray-900 shadow-md transition-all duration-300 hover:shadow-lg"
-    >
-      {/* Xarici Accordion */}
-      <button
-        onClick={() => toggleMain(id)}
-        className="flex items-center justify-between w-full px-6 py-5 focus:outline-none text-gray-900 dark:text-gray-100 font-semibold text-lg"
-      >
-        <span>{title}</span>
-        <span
-          className={`transition-transform duration-300 text-gray-500 dark:text-gray-400 text-3xl font-bold select-none ${
-            openMainId === id ? "rotate-45" : "rotate-0"
-          }`}
-        >
-          +
-        </span>
-      </button>
 
-      {/* Xarici accordion içəriyi */}
-      <div
-        className={`overflow-hidden transition-all duration-500 ease-in-out ${
-          openMainId === id ? "max-h-[1000px] py-5" : "max-h-0 py-0"
-        }`}
-      >
-        {/* Daxili accordionlar */}
-    {slides.map(({ id: slideId, subtitle, info }, index) => (
-  <div
-    key={slideId}
-    className="border border-gray-200 dark:border-gray-700 rounded-lg mb-4 bg-gray-50 dark:bg-gray-800"
-  >
-    <button
-      onClick={() => toggleSlide(slideId)}
-      className="flex items-center justify-between w-full px-5 py-3 focus:outline-none text-gray-800 dark:text-gray-300 font-medium text-md hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors"
-    >
-      <span className="flex items-center gap-2">
-        <span className="text-sm text-gray-500 dark:text-gray-400">{`01/${index + 1}`}</span>
-        {subtitle}
-      </span>
-      <span
-        className={`transition-transform duration-300 text-gray-500 dark:text-gray-400 text-2xl font-bold select-none ${
-          openSlideIds[slideId] ? "rotate-45" : "rotate-0"
-        }`}
-      >
-        +
-      </span>
-    </button>
+        <section className="max-w-7xl mx-auto px-4 py-10">
+          <h2 className="text-4xl font-bold mb-10 text-center">
+            25TREND x APAR RIDE
+          </h2>
+          <h3 className="text-2xl font-semibold mb-6 text-center text-[#ededed]">
+            Bakıda velosipedlə edilə biləcək şeylər 🚴
+          </h3>
 
-    <div
-      className={`overflow-hidden transition-all duration-500 ease-in-out px-5 text-gray-700 dark:text-gray-300 ${
-        openSlideIds[slideId] ? "max-h-96 py-3" : "max-h-0 py-0"
-      }`}
-    >
-      <p className="leading-relaxed">{info}</p>
-    </div>
-  </div>
-))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {slides.map(({ title, info }, idx) => (
+              <div
+                key={idx}
+                className="border rounded-lg p-6 shadow hover:shadow-lg transition cursor-pointer"
+              >
+                <h4 className="text-xl font-semibold mb-3">{title}</h4>
+                <p className="text-[#D2C1B6]">{info}</p>
+              </div>
+            ))}
+          </div>
 
+          <div className="mt-14 text-center max-w-xl mx-auto">
+            <p className="text-lg mb-4">
+              Bəs sən nə vaxt pedal çevirməyi planlayırsan? 🚴‍♂
+            </p>
+            <p className="text-[#F9F3EF] mb-6">
+              Bəlkə də bu post o “ilk pedal” idi. Həm rahat, həm sərfəli, həm də
+              tam sənə uyğun bir yol axtarırdınsa — artıq tapmısan. APAR RIDE
+              ilə günü dolğun keçirmək mümkündür. Qrafik yox, əhvalın sənə yol
+              göstərsin. 🧡
+            </p>
+            <p className="text-indigo-600 font-semibold text-lg">
+              25TREND x AparRide
+            </p>
+          </div>
+        </section>
+
+         <section className="max-w-7xl mx-auto px-4 py-10">
+      <h2 className="text-4xl font-bold mb-10 text-center">25TREND x Aviasales</h2>
+      <h3 className="text-2xl font-semibold mb-6 text-center text-[#ededed]">
+        Bakıda səyahət və kəşf ediləcək möhtəşəm anlar ✈️
+      </h3>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {slides1.map(({ title, info }, idx) => (
+          <div
+            key={idx}
+            className="border rounded-lg p-6 shadow hover:shadow-lg transition cursor-pointer"
+          >
+            <h4 className="text-xl font-semibold mb-3">{title}</h4>
+            {info && <p className="text-[#D2C1B6]">{info}</p>}
+          </div>
+        ))}
       </div>
-    </div>
-  ))}
+
+      <div className="mt-14 text-center max-w-xl mx-auto">
+        <p className="text-lg mb-4">
+          Bəs sən neçə vaxtdır xəritəyə baxıb köçmək istədiyin ölkəni izləyirsən? 🌍
+        </p>
+        <p className=" mb-6 text-[#ededed]">
+          Xəyallarını gerçəkləşdirmək üçün addım atmaq lazımdır. Bəlkə də bu postu görmək o “birinci
+          addım”ın özü idi. Arzularına qovuşmaq üçün lazım olan tək şey Aviasales-də uyğun bileti
+          tapmaqdır. Sonra çamadan, pasport, story və səni gözləyən komforlu bir səyahət. 🤠
+        </p>
+        <p className="text-indigo-600 font-semibold text-lg">25TREND x Aviasales</p>
+      </div>
+    </section>
+
+  
+
+        <h2 className="text-3xl font-bold text-center my-8">
+          <span className="block md:inline">Projects I've worked on at</span>{" "}
+          <b className="block md:inline">'ArxaParta'</b>
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <img
+            src="/sup1.jpg"
+            alt="sup 1"
+            className="w-full h-auto rounded-lg"
+          />
+          <img
+            src="/sup2.jpg"
+            alt="sup 2"
+            className="w-full h-auto rounded-lg"
+          />
+          <img
+            src="/sup3.jpg"
+            alt="sup 3"
+            className="w-full h-auto rounded-lg"
+          />
+          <img
+            src="/sup4.jpg"
+            alt="sup 4"
+            className="w-full h-auto rounded-lg"
+          />
+          <img
+            src="/sup5.jpg"
+            alt="sup 5"
+            className="w-full h-auto rounded-lg"
+          />
+          <img
+            src="/sup6.jpg"
+            alt="sup 6"
+            className="w-full h-auto rounded-lg"
+          />
+        </div>
+
+        <div className="w-full h-screen flex items-center justify-center p-5">
+          <img
+            src="/tapmaca.jpg"
+            alt="Tapmaca"
+            className="max-w-full max-h-full object-contain"
+          />
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <img
+            src="/tapmaca (1).jpg"
+            alt="tapmaca 1"
+            className="w-full h-auto rounded-lg"
+          />
+          <img
+            src="/tapmaca (2).jpg"
+            alt="tapmaca 2"
+            className="w-full h-auto rounded-lg"
+          />
+          <img
+            src="/tapmaca (3).jpg"
+            alt="tapmaca 3"
+            className="w-full h-auto rounded-lg"
+          />
+        </div>
+      </div>
+
+         <section className="max-w-6xl mx-auto px-4 py-10">
+      <h2 className="text-4xl font-bold mb-8 text-center">
+        NƏSƏ Etmək Üçün Heç Nə Etmirsən, Çünki...
+      </h2>
+      
+     <div className="bg-[#113F67] min-h-screen py-12 px-6">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+    {reasons.map(({ title, info }, i) => (
+      <div
+        key={i}
+        className={`p-6 rounded-lg shadow-lg cursor-pointer transition
+          ${i % 2 === 0 ? "bg-[#D2C1B6]" : "bg-[#F9F3EF]"}`}
+      >
+        <h3 className="text-[#1B3C53] text-xl font-semibold mb-3">{title}</h3>
+        <p className="text-[#1B3C53]">{info}</p>
+      </div>
+    ))}
+  </div>
 </div>
 
+
+      <div className="mt-12 max-w-xl mx-auto text-center">
+        <p className="text-lg font-semibold mb-2">
+          NƏSƏ etməlisən, amma heç cürə başlaya bilmirsən?
+        </p>
+        <p className="text-[#D2C1B6] dark:text-gray-200">
+          Heç nə etmirsən, amma niyə etmədiyini də tam bilmirsən. Səbəbləri var. Əslində hamımızda var. Sadəcə bunlara ilişib qalmaq bizi daha da, geri atır. Bu post - sən tərpənənə qədər sənin yerinə danışacaq.
+        </p>
       </div>
+    </section>
+
     </div>
   );
 }
