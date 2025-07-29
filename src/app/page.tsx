@@ -3,64 +3,71 @@ import { useState } from "react";
 import Image from "next/image";
 
 const projects = [
-  {
+   {
     id: 1,
+    name: "NƏSƏ etməlisən, amma heç cürə başlaya bilmirsən?",
+    instagramLink:
+      "https://www.instagram.com/p/DMsCh69N0xV/?igsh=OHVuenp3bHo4ejEx",
+    imageUrl: "/ten.jpg",
+  },
+  {
+    id: 2,
     name: "Artıq Eyni Zövqü Verməyən Şeylər",
     instagramLink:
       "https://www.instagram.com/p/DLmRX5eNE3C/?igsh=aGI2eDhpOTFjajBs&img_index=10",
     imageUrl: "/one.jpg",
   },
   {
-    id: 2,
+    id: 3,
     name: "gen-z love",
     instagramLink:
       "https://www.instagram.com/p/DKzJOrztb9B/?igsh=MXRwY256ODByYXVtbw%3D%3D",
     imageUrl: "/two.jpg",
   },
   {
-    id: 3,
+    id: 4,
     name: "Vaxtında Qədrini Bilmədiyimiz Şeylər",
     instagramLink:
       "https://www.instagram.com/p/DK1XgxZNP5A/?img_index=2&igsh=Y2oyemIyOTBjZXZ5",
     imageUrl: "/three.jpg",
   },
   {
-    id: 4,
+    id: 5,
     name: "Dostlar Günü",
     instagramLink:
       "https://www.instagram.com/p/DKq9ce3NPU3/?igsh=MTI1c3hlYWhpMW40aA%3D%3D",
     imageUrl: "/four.jpg",
   },
   {
-    id: 5,
+    id: 6,
     name: "25trend & DIV Academy",
     instagramLink:
       "https://www.instagram.com/p/DLovQrftcJg/?igsh=MTgzdDBoczJieG9ibg%3D%3D",
     imageUrl: "/five.jpg",
   },
   {
-    id: 6,
+    id: 7,
     name: "Qızmar Günlərdə Həyat Qurtaran Şeylər",
     instagramLink:
       "https://www.instagram.com/p/DMKOZIftu1z/?img_index=2&igsh=NDRlZHliM2lzZHFq",
     imageUrl: "/six.jpg",
   },
   {
-    id: 7,
+    id: 8,
     name: "'AzTube'da Nə Izləyək?",
     instagramLink:
       "https://www.instagram.com/p/DK4OBjqNx3Z/?img_index=1&igsh=MTFlbWZ0NG14d2xnYw%3D%3D",
     imageUrl: "/seven.jpg",
   },
   {
-    id: 8,
+    id: 9,
     name: "Yayda İzləməli Olduğunuz Filmlər",
     instagramLink:
       "https://www.instagram.com/p/DKwJVoTNsfh/?img_index=5&igsh=MXU3MTYzYWJrYTNxMw%3D%3D",
     imageUrl: "/eight.jpg",
   },
   {
-    id: 9,
+    id: 10,
     name: "Ürəyində Nəsə Küsülüsən, Çünki...",
     instagramLink:
       "https://www.instagram.com/p/DKgpj4Vtsu3/?igsh=cWF2cG92a2N5dmZt",
@@ -146,44 +153,7 @@ const slides1 = [
   },
 ];
 
-const reasons = [
-  {
-    title: "Özünü yaxşı tanımırsan",
-    info: "Nə istədiyini bilmirsən, hədəflərin yoxdur. Düşündükcə fikirlərin arasında itirsən. Sənə nə lazım olduğunu düşünmək belə yorur. Uzaq durmaq ən yaxşı alternativdir sanırsan. Ona görə heç nə etmirsən.",
-  },
-  {
-    title: "Bir dəfə sınadın, alınmadı",
-    info: "Və bu bir dəfə sənin üçün kifayət etdi. İndi yenidən başlamaq fikri səni həm qorxudur, həm də bezdirir. Elə düşünürsən ki, həvəsin təkrar qırılacaq. İçində yenidən başlayacaq cəsarət qıvılcımını tapmırsan.",
-  },
-  {
-    title: "Motivasiyan yoxdu",
-    info: "Özünü tənbəl, iradəsiz, həvəsiz biri kimi görürsən. Gözləyirsən ki, bir gün içindən bir enerji gəlsin, hər şeyi dəyişdirəcək bir “klik” olsun. Amma o gözlədikcə gəlmir. Günlər keçir, dəyişən bir şey olmur. Motivasiya üçün hədəflər, səni addımladacaq məqsədlər olmalıdır. Sənsə bunlara sahib olmaq belə istəmirsən.",
-  },
-  {
-    title: "Hələ “vaxtı deyil” deyə düşünürsən",
-    info: "Əslində tam vaxtıdır. Telefonda gündə 5 saat, düşüncələrdə isə 10 saat keçirirsən. Sadəcə real addım atmaq istəmirsən. Çünki içində bir yer bilir ki, oaddım hər şeyi dəyişə bilər. Həyatının tempi tamam fərqli şəkildə irəliləyə bilər. Və sən buna hazır hiss etmirsən.",
-  },
-  {
-    title: "Sənə “inanıram” deyən olmayıb",
-    info: "Heç kim sənin potensialını görməyib. Hətta özün belə fərqində deyilsən. Kiminsə bir dəfə “sən edə bilərsən” deməsi bəlkə də hər şeyi dəyişərdi. Amma o söz heç vaxt gəlməyib. Bəzən özgüvənli olmaq həqiqətən həyatı asanlaşdırır.",
-  },
-  {
-    title: "Zamanı düzgün bölə bilmirsən",
-    info: "Görməli olduğun işlər çoxdur. Hər şeyi birdən etməyə çalışırsan. Fikirlərin bir-birinə dəyir, enerjin boşa dağılıb gedir. Birini etməyə qərar verdikdə, digər şeylər haqda nigaran qalırsan.",
-  },
-  {
-    title: "Qorxursan",
-    info: "Sənə elə gəlir ki, sən geridə qalmısan. Dünya sanki axırıncı qatara minib gedib. Sən isə dayanacaqda oturub baxırsan. Amma özünün fərqinə varmalı və başlamalısan.",
-  },
-  {
-    title: "Özünü itirmisən",
-    info: "Çox fikirləşmisən, çox hiss etmisən, çox susmusan. İndi isə nə düşünəcəyini, nə hiss edəcəyini bilmirsən. Ətraf sakitdir. İçin isə doludur. Və sən bu doluluqda nə edəcəyini bilmədiyindən eləcə dayanırsan.",
-  },
-  {
-    title: "Məntiqinlə hisslərin toqquşur",
-    info: "Qəlbinin səsinimi yoxsa məntiqinimi dinləməli olduğunu bilmirsən. Sanki içində iki insan var və hər birinin istəkləri başqadı. Həyatı axışına buraxa bilmədiyindən ortada qalmısan. Amma artıq seçim etmək vaxtıdır.",
-  },
-];
+
 
 export default function Portfolio() {
   const [isPaused, setIsPaused] = useState(false);
@@ -329,50 +299,6 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <section className="max-w-7xl mx-auto px-4 py-10">
-          <h2 className="text-4xl font-bold mb-10 text-center">
-            25TREND x Aviasales
-          </h2>
-          <h3 className="text-2xl font-semibold mb-6 text-center text-[#ededed]">
-            Bakıda səyahət və kəşf ediləcək möhtəşəm anlar ✈️ <br />
-            NƏSƏ Səyahət Üçün Ürəyin Gedir, Çünki...
-          </h3>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {slides1.map(({ title, info }, idx) => (
-              <div
-                key={idx}
-                className="bg-[#456882] border border-[#D2C1B6]/20 rounded-2xl p-6 shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer text-[#F9F3EF]"
-              >
-                <h4 className="text-xl font-bold mb-3 text-[#F9F3EF]">
-                  {title}
-                </h4>
-                {info && (
-                  <p className="text-sm leading-relaxed text-[#D2C1B6]">
-                    {info}
-                  </p>
-                )}
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-14 text-center max-w-xl mx-auto">
-            <p className="text-lg mb-4">
-              Bəs sən neçə vaxtdır xəritəyə baxıb köçmək istədiyin ölkəni
-              izləyirsən? 🌍
-            </p>
-            <p className=" mb-6 text-[#ededed]">
-              Xəyallarını gerçəkləşdirmək üçün addım atmaq lazımdır. Bəlkə də bu
-              postu görmək o “birinci addım”ın özü idi. Arzularına qovuşmaq üçün
-              lazım olan tək şey Aviasales-də uyğun bileti tapmaqdır. Sonra
-              çamadan, pasport, story və səni gözləyən komforlu bir səyahət. 🤠
-            </p>
-            <p className="text-indigo-600 font-semibold text-lg">
-              25TREND x Aviasales
-            </p>
-          </div>
-        </section>
-
         <h2 className="text-3xl font-bold text-center my-8">
           <span className="block md:inline">
             Powerful stories told through words
@@ -460,14 +386,24 @@ export default function Portfolio() {
         </div>
       </div>
 
+
+
+
+
+
       <section className="max-w-6xl mx-auto px-4 py-10">
         <h2 className="text-4xl font-bold mb-8 text-center">
-          NƏSƏ Etmək Üçün Heç Nə Etmirsən, Çünki...
+           25TREND x Aviasales
         </h2>
+
+         <h3 className="text-2xl font-semibold mb-6 text-center text-[#ededed]">
+            Bakıda səyahət və kəşf ediləcək möhtəşəm anlar ✈️ <br />
+            NƏSƏ Səyahət Üçün Ürəyin Gedir, Çünki...
+          </h3>
 
         <div className="bg-[#113F67] min-h-screen py-12 px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {reasons.map(({ title, info }, i) => (
+            {slides1.map(({ title, info }, i) => (
               <div
                 key={i}
                 className={`p-6 rounded-lg shadow-lg cursor-pointer transition
@@ -482,17 +418,19 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <div className="mt-12 max-w-xl mx-auto text-center">
-          <p className="text-lg font-semibold mb-2">
-            NƏSƏ etməlisən, amma heç cürə başlaya bilmirsən?
-          </p>
-          <p className="text-[#D2C1B6] dark:text-gray-200">
-            Heç nə etmirsən, amma niyə etmədiyini də tam bilmirsən. Səbəbləri
-            var. Əslində hamımızda var. Sadəcə bunlara ilişib qalmaq bizi daha
-            daha geri atır. Bu post - sən tərpənənə qədər sənin yerinə
-            danışacaq.
-          </p>
-        </div>
+        <div className="mt-14 text-center max-w-xl mx-auto">
+            <p className="text-lg mb-4">
+              Bəs sən neçə vaxtdır xəritəyə baxıb köçmək istədiyin ölkəni
+              izləyirsən? 🌍
+            </p>
+            <p className=" mb-6 text-[#ededed]">
+              Xəyallarını gerçəkləşdirmək üçün addım atmaq lazımdır. Bəlkə də bu
+              postu görmək o “birinci addım”ın özü idi. Arzularına qovuşmaq üçün
+              lazım olan tək şey Aviasales-də uyğun bileti tapmaqdır. Sonra
+              çamadan, pasport, story və səni gözləyən komforlu bir səyahət. 🤠
+            </p>
+           
+          </div>
       </section>
     </div>
   );
