@@ -1,73 +1,94 @@
 "use client";
-import { useState } from "react";
 import Image from "next/image";
+import { useState} from "react";
 
 const projects = [
-   {
+  {
     id: 1,
+    name: "Yemək Yeyəndə Nə İzləyək ?",
+    instagramLink:
+      "https://www.instagram.com/p/DNfMeltt2zI/?igsh=MXZvcjRtbjJ2Mzh0Mg%3D%3D&img_index=1",
+    imageUrl: "/food.jpg",
+  },
+  {
+    id: 2,
+    name: "Bakı Kinoteatrlarında Nə İzləyək ?",
+    instagramLink:
+      "https://www.instagram.com/p/DM2BaYbtGnL/?igsh=NTNpa2UxNTdvdWZl",
+    imageUrl: "/kino.jpg",
+  },
+  {
+    id: 3,
+    name: "Həftəsonunu Harda Keçirək?",
+    instagramLink:
+      "https://www.instagram.com/p/DNVJUJttupy/?img_index=9&igsh=MTM3ZWZ6aHFsMWlmeg%3D%3D",
+    imageUrl: "/eleven.jpg",
+  },
+  {
+    id: 4,
     name: "NƏSƏ etməlisən, amma heç cürə başlaya bilmirsən?",
     instagramLink:
       "https://www.instagram.com/p/DMsCh69N0xV/?igsh=OHVuenp3bHo4ejEx",
     imageUrl: "/ten.jpg",
   },
   {
-    id: 2,
+    id: 5,
     name: "Artıq Eyni Zövqü Verməyən Şeylər",
     instagramLink:
       "https://www.instagram.com/p/DLmRX5eNE3C/?igsh=aGI2eDhpOTFjajBs&img_index=10",
     imageUrl: "/one.jpg",
   },
   {
-    id: 3,
+    id: 6,
     name: "gen-z love",
     instagramLink:
       "https://www.instagram.com/p/DKzJOrztb9B/?igsh=MXRwY256ODByYXVtbw%3D%3D",
     imageUrl: "/two.jpg",
   },
   {
-    id: 4,
+    id: 7,
     name: "Vaxtında Qədrini Bilmədiyimiz Şeylər",
     instagramLink:
       "https://www.instagram.com/p/DK1XgxZNP5A/?img_index=2&igsh=Y2oyemIyOTBjZXZ5",
     imageUrl: "/three.jpg",
   },
   {
-    id: 5,
+    id: 8,
     name: "Dostlar Günü",
     instagramLink:
       "https://www.instagram.com/p/DKq9ce3NPU3/?igsh=MTI1c3hlYWhpMW40aA%3D%3D",
     imageUrl: "/four.jpg",
   },
   {
-    id: 6,
+    id: 9,
     name: "25trend & DIV Academy",
     instagramLink:
       "https://www.instagram.com/p/DLovQrftcJg/?igsh=MTgzdDBoczJieG9ibg%3D%3D",
     imageUrl: "/five.jpg",
   },
   {
-    id: 7,
+    id: 10,
     name: "Qızmar Günlərdə Həyat Qurtaran Şeylər",
     instagramLink:
       "https://www.instagram.com/p/DMKOZIftu1z/?img_index=2&igsh=NDRlZHliM2lzZHFq",
     imageUrl: "/six.jpg",
   },
   {
-    id: 8,
+    id: 11,
     name: "'AzTube'da Nə Izləyək?",
     instagramLink:
       "https://www.instagram.com/p/DK4OBjqNx3Z/?img_index=1&igsh=MTFlbWZ0NG14d2xnYw%3D%3D",
     imageUrl: "/seven.jpg",
   },
   {
-    id: 9,
+    id: 12,
     name: "Yayda İzləməli Olduğunuz Filmlər",
     instagramLink:
       "https://www.instagram.com/p/DKwJVoTNsfh/?img_index=5&igsh=MXU3MTYzYWJrYTNxMw%3D%3D",
     imageUrl: "/eight.jpg",
   },
   {
-    id: 10,
+    id: 13,
     name: "Ürəyində Nəsə Küsülüsən, Çünki...",
     instagramLink:
       "https://www.instagram.com/p/DKgpj4Vtsu3/?igsh=cWF2cG92a2N5dmZt",
@@ -153,7 +174,23 @@ const slides1 = [
   },
 ];
 
-
+const videos = [
+  "/videos/zaman (1).mp4",
+  "/videos/zaman (2).mp4",
+  "/videos/zaman (3).mp4",
+  "/videos/zaman (4).mp4",
+  "/videos/zaman (5).mp4",
+  "/videos/zaman (6).mp4",
+  "/videos/zaman (7).mp4",
+  "/videos/zaman (8).mp4",
+  "/videos/zaman (9).mp4",
+  "/videos/zaman (10).mp4",
+  "/videos/zaman (11).mp4",
+  "/videos/zaman (12).mp4",
+  "/videos/zaman (13).mp4",
+  "/videos/zaman (14).mp4",
+  "/videos/zaman (15).mp4",
+];
 
 export default function Portfolio() {
   const [isPaused, setIsPaused] = useState(false);
@@ -161,6 +198,8 @@ export default function Portfolio() {
   function handleClick(instagramLink: string) {
     window.open(instagramLink, "_blank");
   }
+  
+  
 
   return (
     <div className="bg-[#113F67]">
@@ -179,29 +218,28 @@ export default function Portfolio() {
             >
               Content Creator & Copywriter
             </p>
-          
+
             <div className="w-20 h-1 bg-[#FDF5AA] rounded-full animate-pulse mx-auto"></div>
 
-<div className="flex justify-center gap-4 mt-8">
-  <a
-    href="https://www.linkedin.com/in/orkhan-gurbanli-405043297/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="px-8 py-3 rounded-lg text-white bg-[#58A0C8] hover:bg-[#34699A] transition-colors"
-    style={{ fontFamily: "var(--font-geist-mono)" }}
-  >
-    LinkedIn
-  </a>
+            <div className="flex justify-center gap-4 mt-8">
+              <a
+                href="https://www.linkedin.com/in/orkhan-gurbanli-405043297/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3 rounded-lg text-white bg-[#58A0C8] hover:bg-[#34699A] transition-colors"
+                style={{ fontFamily: "var(--font-geist-mono)" }}
+              >
+                LinkedIn
+              </a>
 
-  <a
-    href="mailto:orkhankhurban@gmail.com"
-    className="px-8 py-3 rounded-lg text-white bg-[#58A0C8] hover:bg-[#34699A] transition-colors"
-    style={{ fontFamily: "var(--font-geist-mono)" }}
-  >
-    Email
-  </a>
-</div>
-
+              <a
+                href="mailto:orkhankhurban@gmail.com"
+                className="px-8 py-3 rounded-lg text-white bg-[#58A0C8] hover:bg-[#34699A] transition-colors"
+                style={{ fontFamily: "var(--font-geist-mono)" }}
+              >
+                Email
+              </a>
+            </div>
           </div>
         </div>
 
@@ -211,22 +249,22 @@ export default function Portfolio() {
 
         <section
           className="overflow-hidden py-10"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
+          // onMouseEnter={() => setIsPaused(true)}
+          // onMouseLeave={() => setIsPaused(false)}
         >
           <div
-            className={`flex gap-6 px-6 animate-slide ${
+            className={`grid gap-6 px-6 animate-slide ${
               isPaused ? "paused" : ""
-            }`}
-            style={{ width: `${projects.length * 250}px` }}
+            } grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4`}
           >
             {projects.map((project, i) => (
               <div
                 key={i}
-                onClick={() => handleClick(project.instagramLink)}
-                className="min-w-[250px] max-w-[250px] rounded-lg p-4 text-[#113F67] shadow-lg flex flex-col justify-between cursor-pointer hover:shadow-2xl transition-shadow duration-300"
-                title="Instagram postuna bax"
-                style={{ backgroundColor: "#FDF5AA" }}
+                className="rounded-lg p-4 text-[#113F67] shadow-lg flex flex-col justify-between cursor-pointer transition-all duration-300 transform hover:scale-105 hover:rotate-1 hover:shadow-2xl animate-[scaleUp_0.6s_ease-out_forwards]"
+                style={{
+                  backgroundColor: "#FDF5AA",
+                  animationDelay: `${i * 0.15}s`,
+                }}
               >
                 <Image
                   src={project.imageUrl}
@@ -241,23 +279,51 @@ export default function Portfolio() {
           </div>
 
           <style jsx>{`
-            @keyframes slide {
+            @keyframes scaleUp {
               0% {
-                transform: translateX(0);
+                transform: scale(0.9);
+                opacity: 0;
               }
               100% {
-                transform: translateX(-50%);
+                transform: scale(1);
+                opacity: 1;
               }
             }
-
-            .animate-slide {
-              animation: slide 25s linear infinite;
-            }
-            .paused {
-              animation-play-state: paused !important;
-            }
           `}</style>
+
+          {/* <style jsx>{`
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .animate-slide {
+      animation: slide 25s linear infinite;
+    }
+    .paused {
+      animation-play-state: paused !important;
+    }
+  `}</style> */}
         </section>
+        <section className="bg-[#113F67] text-[#FDF5AA] py-10">
+        <h2 className="text-4xl font-bold mb-8 text-center">
+          Listen to the voice within yourself!
+        </h2>
+        <div className="max-w-[600px] mx-auto rounded-xl shadow-2xl overflow-hidden">
+          <video
+            src="/videos/video1.mp4"
+            controls
+            autoPlay
+            loop
+            muted
+            className="w-full h-auto object-cover"
+          />
+        </div>
+      </section>
 
         <section className="max-w-7xl mx-auto px-4 py-10">
           <h2 className="text-4xl font-bold mb-10 text-center">
@@ -385,21 +451,17 @@ export default function Portfolio() {
           />
         </div>
       </div>
-
-
-
-
-
+      
 
       <section className="max-w-6xl mx-auto px-4 py-10">
         <h2 className="text-4xl font-bold mb-8 text-center">
-           25TREND x Aviasales
+          25TREND x Aviasales
         </h2>
 
-         <h3 className="text-2xl font-semibold mb-6 text-center text-[#ededed]">
-            Bakıda səyahət və kəşf ediləcək möhtəşəm anlar ✈️ <br />
-            NƏSƏ Səyahət Üçün Ürəyin Gedir, Çünki...
-          </h3>
+        <h3 className="text-2xl font-semibold mb-6 text-center text-[#ededed]">
+          Bakıda səyahət və kəşf ediləcək möhtəşəm anlar ✈️ <br />
+          NƏSƏ Səyahət Üçün Ürəyin Gedir, Çünki...
+        </h3>
 
         <div className="bg-[#113F67] min-h-screen py-12 px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -419,19 +481,32 @@ export default function Portfolio() {
         </div>
 
         <div className="mt-14 text-center max-w-xl mx-auto">
-            <p className="text-lg mb-4">
-              Bəs sən neçə vaxtdır xəritəyə baxıb köçmək istədiyin ölkəni
-              izləyirsən? 🌍
-            </p>
-            <p className=" mb-6 text-[#ededed]">
-              Xəyallarını gerçəkləşdirmək üçün addım atmaq lazımdır. Bəlkə də bu
-              postu görmək o “birinci addım”ın özü idi. Arzularına qovuşmaq üçün
-              lazım olan tək şey Aviasales-də uyğun bileti tapmaqdır. Sonra
-              çamadan, pasport, story və səni gözləyən komforlu bir səyahət. 🤠
-            </p>
-           
-          </div>
+          <p className="text-lg mb-4">
+            Bəs sən neçə vaxtdır xəritəyə baxıb köçmək istədiyin ölkəni
+            izləyirsən? 🌍
+          </p>
+          <p className=" mb-6 text-[#ededed]">
+            Xəyallarını gerçəkləşdirmək üçün addım atmaq lazımdır. Bəlkə də bu
+            postu görmək o “birinci addım”ın özü idi. Arzularına qovuşmaq üçün
+            lazım olan tək şey Aviasales-də uyğun bileti tapmaqdır. Sonra
+            çamadan, pasport, story və səni gözləyən komforlu bir səyahət. 🤠
+          </p>
+        </div>
       </section>
+
+
+       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
+      {videos.map((video, i) => (
+        <div key={i} className="rounded-xl shadow-lg overflow-hidden">
+          <video
+            src={video}
+            controls
+            className="w-full h-auto object-cover"
+          />
+        </div>
+      ))}
+    </div>
+
     </div>
   );
 }
