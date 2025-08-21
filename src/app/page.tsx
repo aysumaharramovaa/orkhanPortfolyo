@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState} from "react";
+import { useState } from "react";
 
 const projects = [
   {
@@ -198,8 +198,6 @@ export default function Portfolio() {
   function handleClick(instagramLink: string) {
     window.open(instagramLink, "_blank");
   }
-  
-  
 
   return (
     <div className="bg-[#113F67]">
@@ -310,20 +308,20 @@ export default function Portfolio() {
   `}</style> */}
         </section>
         <section className="bg-[#113F67] text-[#FDF5AA] py-10">
-        <h2 className="text-4xl font-bold mb-8 text-center">
-          Listen to the voice within yourself!
-        </h2>
-        <div className="max-w-[600px] mx-auto rounded-xl shadow-2xl overflow-hidden">
-          <video
-            src="/videos/video1.mp4"
-            controls
-            autoPlay
-            loop
-            muted
-            className="w-full h-auto object-cover"
-          />
-        </div>
-      </section>
+          <h2 className="text-4xl font-bold mb-8 text-center">
+            Listen to the voice within yourself!
+          </h2>
+          <div className="max-w-[600px] mx-auto rounded-xl shadow-2xl overflow-hidden">
+            <video
+              src="/videos/video1.mp4"
+              controls
+              autoPlay
+              loop
+              muted
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </section>
 
         <section className="max-w-7xl mx-auto px-4 py-10">
           <h2 className="text-4xl font-bold mb-10 text-center">
@@ -451,7 +449,6 @@ export default function Portfolio() {
           />
         </div>
       </div>
-      
 
       <section className="max-w-6xl mx-auto px-4 py-10">
         <h2 className="text-4xl font-bold mb-8 text-center">
@@ -494,18 +491,25 @@ export default function Portfolio() {
         </div>
       </section>
 
+      <h2 className="text-4xl font-bold mb-8 text-center">
+        Even after all this time, the reason for our laughter is still them!
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
+        {videos.map((video, i) => (
+          <div key={i} className="rounded-xl shadow-lg overflow-hidden">
+            <video
+              src={video}
+              controls
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        ))}
+      </div>
 
-       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
-      {videos.map((video, i) => (
-        <div key={i} className="rounded-xl shadow-lg overflow-hidden">
-          <video
-            src={video}
-            controls
-            className="w-full h-auto object-cover"
-          />
-        </div>
-      ))}
-    </div>
+      <footer className="w-full py-6 text-center text-sm text-gray-500">
+        © 2025. All rights reserved. 
+      </footer>
+
 
     </div>
   );
