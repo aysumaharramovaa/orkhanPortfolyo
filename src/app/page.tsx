@@ -244,52 +244,54 @@ export default function Portfolio() {
         <h2 className="text-3xl font-bold text-center my-8">
           Content stories created for <b>25TREND</b>
         </h2>
+<section
+  className="overflow-hidden py-10"
+  // onMouseEnter={() => setIsPaused(true)}
+  // onMouseLeave={() => setIsPaused(false)}
+>
+  <div
+    className={`grid gap-6 px-6 animate-slide ${
+      isPaused ? "paused" : ""
+    } grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4`}
+  >
+    {projects.map((project, i) => (
+      <a
+        key={i}
+        href={project.instagramLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded-lg p-4 text-[#113F67] shadow-lg flex flex-col justify-between cursor-pointer transition-all duration-300 transform hover:scale-105 hover:rotate-1 hover:shadow-2xl animate-[scaleUp_0.6s_ease-out_forwards]"
+        style={{
+          backgroundColor: "#FDF5AA",
+          animationDelay: `${i * 0.15}s`,
+        }}
+      >
+        <Image
+          src={project.imageUrl}
+          alt={project.name}
+          width={250}
+          height={250}
+          className="rounded-md mb-4 w-full object-cover"
+        />
+        <p className="font-semibold">- {project.name}</p>
+      </a>
+    ))}
+  </div>
 
-        <section
-          className="overflow-hidden py-10"
-          // onMouseEnter={() => setIsPaused(true)}
-          // onMouseLeave={() => setIsPaused(false)}
-        >
-          <div
-            className={`grid gap-6 px-6 animate-slide ${
-              isPaused ? "paused" : ""
-            } grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4`}
-          >
-            {projects.map((project, i) => (
-              <div
-                key={i}
-                className="rounded-lg p-4 text-[#113F67] shadow-lg flex flex-col justify-between cursor-pointer transition-all duration-300 transform hover:scale-105 hover:rotate-1 hover:shadow-2xl animate-[scaleUp_0.6s_ease-out_forwards]"
-                style={{
-                  backgroundColor: "#FDF5AA",
-                  animationDelay: `${i * 0.15}s`,
-                }}
-              >
-                <Image
-                  src={project.imageUrl}
-                  alt={project.name}
-                  width={250}
-                  height={250}
-                  className="rounded-md mb-4 w-full object-cover"
-                />
-                <p className="font-semibold">- {project.name}</p>
-              </div>
-            ))}
-          </div>
+  <style jsx>{`
+    @keyframes scaleUp {
+      0% {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  `}</style>
 
-          <style jsx>{`
-            @keyframes scaleUp {
-              0% {
-                transform: scale(0.9);
-                opacity: 0;
-              }
-              100% {
-                transform: scale(1);
-                opacity: 1;
-              }
-            }
-          `}</style>
-
-          {/* <style jsx>{`
+  {/* <style jsx>{`
     @keyframes slide {
       0% {
         transform: translateX(0);
@@ -306,7 +308,9 @@ export default function Portfolio() {
       animation-play-state: paused !important;
     }
   `}</style> */}
-        </section>
+</section>
+     
+
         <section className="bg-[#113F67] text-[#FDF5AA] py-10">
           <h2 className="text-4xl font-bold mb-8 text-center">
             Listen to the voice within yourself!
