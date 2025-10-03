@@ -94,6 +94,97 @@ const projects = [
       "https://www.instagram.com/p/DKgpj4Vtsu3/?igsh=cWF2cG92a2N5dmZt",
     imageUrl: "/nine.jpg",
   },
+  {
+    id: 14,
+    name: "Həftəsonunu Harda Keçirək?",
+    instagramLink:
+      "https://www.instagram.com/p/DPTZKt1DD9x/?utm_source=ig_web_copy_link&igsh=MXJ0eXppZ2Z4ejVueA==",
+    imageUrl: "/harda.jpg",
+  },
+  {
+    id: 15,
+    name: "Qurban Qurbanov",
+    instagramLink:
+      "https://www.instagram.com/p/DPRuaN5DGlQ/?utm_source=ig_web_copy_link&igsh=MWNzZW1hZm1jZmticg==",
+    imageUrl: "/qurbanqurbanov.jpg",
+  },
+  {
+    id: 16,
+    name: "Bu Ay Kimin Konsertinə Gedək?",
+    instagramLink:
+      "https://www.instagram.com/p/DPRAE-pDBRD/?utm_source=ig_web_copy_link&igsh=MWt5ZXBrcmxrd3h3MQ==",
+    imageUrl: "/buay.jpg",
+  },
+  {
+    id: 17,
+    name: "Anime Sevməyənlər Üçün 9 Şah Əsər",
+    instagramLink:
+      "https://www.instagram.com/p/DPJJMYrjIVl/?utm_source=ig_web_copy_link&igsh=czBndG8yOHJvbWp3",
+    imageUrl: "/anime.png",
+  },
+  {
+    id: 18,
+    name: "Yemək Yeyəndə Nə İzləyək ?",
+    instagramLink:
+      "https://www.instagram.com/p/DPBS7HVDPEh/?utm_source=ig_web_copy_link&igsh=bTNiMWVzN2RrbmU5",
+    imageUrl: "/yemek2.jpg",
+  },
+  {
+    id: 19,
+    name: "Sadəcə Bir Anlıq Xoşbəxtlik Verən Şeylər",
+    instagramLink:
+      "https://www.instagram.com/p/DO8Iz_gDG2O/?utm_source=ig_web_copy_link&igsh=MTZyNDZydDd1Ync1dA==",
+    imageUrl: "/xosbextlik.jpg",
+  },
+  {
+    id: 20,
+    name: "Yayda İzləməli Olduğunuz Filmlər",
+    instagramLink:
+      "https://www.instagram.com/p/DOvglB_DJ93/?utm_source=ig_web_copy_link&igsh=N3NyeXI3azBoODBu",
+    imageUrl: "/nese.jpg",
+  },
+  {
+    id: 21,
+    name: "Peşmanlıq",
+    instagramLink:
+      "https://www.instagram.com/p/DOs0NZuDODI/?utm_source=ig_web_copy_link&igsh=MXRrcWl2amx2Njhncw==",
+    imageUrl: "/pesmanliq.jpg",
+  },
+  {
+    id: 22,
+    name: "Kiçik Görünən, Amma Kiçik Olmayan Şeylər",
+    instagramLink:
+      "https://www.instagram.com/p/DOX4rSxDLH4/?utm_source=ig_web_copy_link&igsh=MWtiZGlwZXo3Y2Q0cQ==",
+    imageUrl: "/kicik.jpg",
+  },
+  {
+    id: 23,
+    name: "Xoşbəxt Olmağın Xəritəsi",
+    instagramLink:
+      "https://www.instagram.com/p/DOVedbqjBM7/?utm_source=ig_web_copy_link&igsh=MTVld283cm1iNzF1aw==",
+    imageUrl: "/xerite.jpg",
+  },
+  {
+    id: 24,
+    name: "Tədbirdə Davranış Qaydaları",
+    instagramLink:
+      "https://www.instagram.com/p/DOQQTFTDHE-/?utm_source=ig_web_copy_link&igsh=MWliOG02eW96dno4dg==",
+    imageUrl: "/boolood.jpg",
+  },
+  {
+    id: 25,
+    name: "Həyatında NƏSƏ Sevgi Çatışmır, Çünki...",
+    instagramLink:
+      "https://www.instagram.com/p/DNsNV5NWM2i/?utm_source=ig_web_copy_link&igsh=c2twd3lqMzRvOWNx",
+    imageUrl: "/sevgi.jpg",
+  },
+  {
+    id: 26,
+    name: "AzTube'da Nə İzləyək?",
+    instagramLink:
+      "https://www.instagram.com/p/DN0DBSmWBmG/?utm_source=ig_web_copy_link&igsh=a2FmNWxmNWxzbmdw",
+    imageUrl: "/aztube.jpg",
+  },
 ];
 
 const slides = [
@@ -198,6 +289,12 @@ export default function Portfolio() {
   function handleClick(instagramLink: string) {
     window.open(instagramLink, "_blank");
   }
+  const cols = 4;
+  const [visibleCount, setVisibleCount] = useState(cols * 2);
+
+  const handleSeeMore = () => {
+    setVisibleCount((prev) => prev + cols);
+  };
 
   return (
     <div className="bg-[#113F67]">
@@ -244,72 +341,83 @@ export default function Portfolio() {
         <h2 className="text-3xl font-bold text-center my-8">
           Content stories created for <b>25TREND</b>
         </h2>
-<section
-  className="overflow-hidden py-10"
-  // onMouseEnter={() => setIsPaused(true)}
-  // onMouseLeave={() => setIsPaused(false)}
->
-  <div
-    className={`grid gap-6 px-6 animate-slide ${
-      isPaused ? "paused" : ""
-    } grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4`}
-  >
-    {projects.map((project, i) => (
-      <a
-        key={i}
-        href={project.instagramLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="rounded-lg p-4 text-[#113F67] shadow-lg flex flex-col justify-between cursor-pointer transition-all duration-300 transform hover:scale-105 hover:rotate-1 hover:shadow-2xl animate-[scaleUp_0.6s_ease-out_forwards]"
-        style={{
-          backgroundColor: "#FDF5AA",
-          animationDelay: `${i * 0.15}s`,
-        }}
-      >
-        <Image
-          src={project.imageUrl}
-          alt={project.name}
-          width={250}
-          height={250}
-          className="rounded-md mb-4 w-full object-cover"
-        />
-        <p className="font-semibold">- {project.name}</p>
-      </a>
-    ))}
-  </div>
+        <section
+          className="overflow-hidden py-10"
+          // onMouseEnter={() => setIsPaused(true)}
+          // onMouseLeave={() => setIsPaused(false)}
+        >
+          <div
+            className={`grid gap-6 px-6 animate-slide ${
+              isPaused ? "paused" : ""
+            } grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4`}
+          >
+            {projects.slice(0, visibleCount).map((project, i) => (
+              <a
+                key={i}
+                href={project.instagramLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg p-4 text-[#113F67] shadow-lg flex flex-col justify-between cursor-pointer transition-all duration-300 transform hover:scale-105 hover:rotate-1 hover:shadow-2xl animate-[scaleUp_0.6s_ease-out_forwards]"
+                style={{
+                  backgroundColor: "#FDF5AA",
+                  animationDelay: `${i * 0.15}s`,
+                }}
+              >
+                <Image
+                  src={project.imageUrl}
+                  alt={project.name}
+                  width={250}
+                  height={250}
+                  className="rounded-md mb-4 w-full object-cover"
+                />
+                <p className="font-semibold">- {project.name}</p>
+              </a>
+            ))}
+          </div>
 
-  <style jsx>{`
-    @keyframes scaleUp {
-      0% {
-        transform: scale(0.9);
-        opacity: 0;
-      }
-      100% {
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
-  `}</style>
+          {/* See More düyməsi */}
+          {visibleCount < projects.length && (
+            <div className="text-center mt-6">
+              <button
+                onClick={handleSeeMore}
+                className="px-6 py-2 bg-[#FDF5AA] text-[#113F67] rounded-lg shadow hover:bg-[#c9c491] transition-all duration-300"
+              >
+                See More
+              </button>
+            </div>
+          )}
 
-  {/* <style jsx>{`
-    @keyframes slide {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
+          <style jsx>{`
+            @keyframes scaleUp {
+              0% {
+                transform: scale(0.9);
+                opacity: 0;
+              }
+              100% {
+                transform: scale(1);
+                opacity: 1;
+              }
+            }
+          `}</style>
 
-    .animate-slide {
-      animation: slide 25s linear infinite;
-    }
-    .paused {
-      animation-play-state: paused !important;
-    }
-  `}</style> */}
-</section>
-     
+          {/* <style jsx>{`
+        @keyframes slide {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        .animate-slide {
+          animation: slide 25s linear infinite;
+        }
+        .paused {
+          animation-play-state: paused !important;
+        }
+      `}</style> */}
+        </section>
 
         <section className="bg-[#113F67] text-[#FDF5AA] py-10">
           <h2 className="text-4xl font-bold mb-8 text-center">
@@ -364,6 +472,31 @@ export default function Portfolio() {
             <p className="text-indigo-600 font-semibold text-lg">
               25TREND x AparRide
             </p>
+          </div>
+        </section>
+
+        <section className="bg-[#113F67] text-[#FDF5AA] py-10 px-4">
+          <h2 className="text-4xl font-bold mb-6 text-center">
+            How about getting to know the world of animation up close?
+          </h2>
+
+          <div className="max-w-[600px] mx-auto rounded-xl shadow-2xl overflow-hidden mb-6">
+            <video
+              src="/videos/animfilmi.mp4"
+              controls
+              className="w-full h-auto object-cover"
+            />
+          </div>
+
+          <div className="text-center">
+            <a
+              href="https://www.instagram.com/reel/DOS64BcjH8u/?utm_source=ig_web_copy_link&igsh=bWZ1cmN0d3pkZDZo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 bg-[#FDF5AA] text-[#113F67] rounded-lg shadow hover:bg-[#c9c491] transition-colors"
+            >
+              Instagram Link
+            </a>
           </div>
         </section>
 
@@ -511,10 +644,8 @@ export default function Portfolio() {
       </div>
 
       <footer className="w-full py-6 text-center text-sm text-gray-500">
-        © 2025. All rights reserved. 
+        © 2025. All rights reserved.
       </footer>
-
-
     </div>
   );
 }
