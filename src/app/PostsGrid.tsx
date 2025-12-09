@@ -114,7 +114,7 @@ const PostsGrid = () => {
         <Post images={qorxuImages} />
       </div>
       <div className="w-full sm:w-1/2 lg:w-1/4">
-        <Post images={dusunImages} />
+        <Post images={ferqliImages} />
       </div>
       <div className="w-full sm:w-1/2 lg:w-1/4">
         <Post images={neseImages} />
