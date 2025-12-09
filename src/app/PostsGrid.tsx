@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
+// Şəkillər
 const sebrImages = Array.from({ length: 10 }, (_, i) => `/sebr${i === 0 ? "" : i}.jpg`);
 const dusunImages = Array.from({ length: 8 }, (_, i) => `/dusun${i === 0 ? "" : i}.jpg`);
 
@@ -12,6 +13,7 @@ const Post = ({ images }: { images: string[] }) => {
   const [direction, setDirection] = useState(1); 
   const [offset, setOffset] = useState(0);
 
+  // Avtomatik şəkil dəyişmə və sağ-sol effekt
   useEffect(() => {
     const interval = setInterval(() => {
       if (!isPaused) {
@@ -28,6 +30,7 @@ const Post = ({ images }: { images: string[] }) => {
     return () => clearInterval(interval);
   }, [isPaused, direction, images.length]);
 
+  // Funksiyalar
   const togglePause = () => setIsPaused((prev) => !prev);
   const prevImage = () => setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
   const nextImage = () => setCurrentImage((prev) => (prev + 1) % images.length);
@@ -38,11 +41,11 @@ const Post = ({ images }: { images: string[] }) => {
         <Image
           src={images[currentImage]}
           alt="post image"
-          width={500} // şəkilin ölçüsünə uyğun dəyişdir
-          height={300}
+          width={500}   // şəkil ölçüsünə uyğun dəyişdir
+          height={300}  // şəkil ölçüsünə uyğun dəyişdir
           style={{ transform: `translateX(${offset}px)` }}
           className="w-full h-auto object-cover rounded-lg transition-transform duration-100"
-          priority // lazım olsa LCP üçün
+          priority      // LCP üçün
         />
       </div>
 
