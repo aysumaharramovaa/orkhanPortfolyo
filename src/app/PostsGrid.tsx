@@ -29,13 +29,18 @@ const ferqliImages = Array.from(
   (_, i) => `/ferqlii${i === 0 ? "" : i}.jpg`
 );
 const spImages = Array.from(
-  { length: 8 },
+  { length: 9 },
   (_, i) => `/sp${i === 0 ? "" : i}.jpg`
 );
 const sfImages = Array.from(
   { length: 11 },
   (_, i) => `/sf${i === 0 ? "" : i}.jpg`
 );
+const dovsanImages = Array.from(
+  { length: 10 },
+  (_, i) => `/dovsan${i === 0 ? "" : i}.jpg`
+);
+
 const Post = ({ images }: { images: string[] }) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -121,6 +126,9 @@ const PostsGrid = () => {
       </div>
       <div className="w-full sm:w-1/2 lg:w-1/4">
         <Post images={anImages} />
+      </div>
+      <div className="w-full sm:w-1/2 lg:w-1/4">
+        <Post images={dovsanImages} />
       </div>
     </div>
   );
