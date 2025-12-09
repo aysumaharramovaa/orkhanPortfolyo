@@ -3,9 +3,12 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-// Şəkillər
+// şəkillər
 const sebrImages = Array.from({ length: 10 }, (_, i) => `/sebr${i === 0 ? "" : i}.jpg`);
 const dusunImages = Array.from({ length: 8 }, (_, i) => `/dusun${i === 0 ? "" : i}.jpg`);
+const qorxuImages = Array.from({ length: 8 }, (_, i) => `/qorxu${i === 0 ? "" : i}.jpg`);
+const anImages = Array.from({ length: 5 }, (_, i) => `/an${i === 0 ? "" : i}.jpg`);
+const neseImages = Array.from({ length: 7 }, (_, i) => `/nese${i === 0 ? "" : i}.jpg`);
 
 const Post = ({ images }: { images: string[] }) => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -73,6 +76,15 @@ const PostsGrid = () => {
       </div>
       <div className="w-full sm:w-1/2 lg:w-1/4">
         <Post images={dusunImages} />
+      </div>
+      <div className="w-full sm:w-1/2 lg:w-1/4">
+        <Post images={qorxuImages} />
+      </div>
+      <div className="w-full sm:w-1/2 lg:w-1/4">
+        <Post images={anImages} />
+      </div>
+      <div className="w-full sm:w-1/2 lg:w-1/4">
+        <Post images={neseImages} />
       </div>
     </div>
   );

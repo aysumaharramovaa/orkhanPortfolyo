@@ -142,7 +142,7 @@ const projects = [
     name: "Yayda İzləməli Olduğunuz Filmlər",
     instagramLink:
       "https://www.instagram.com/p/DOvglB_DJ93/?utm_source=ig_web_copy_link&igsh=N3NyeXI3azBoODBu",
-    imageUrl: "/nese.jpg",
+    imageUrl: "/nesee.jpg",
   },
   {
     id: 21,
