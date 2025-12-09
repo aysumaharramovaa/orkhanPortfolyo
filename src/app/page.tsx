@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import PostsGrid from "./PostsGrid";
+import PostsGride from "./PostsGrid";
 
 const projects = [
   {
@@ -344,7 +344,7 @@ export default function Portfolio() {
   <h2 className="text-3xl font-bold text-center mb-6">
     Carousel Posts
   </h2>
-  <PostsGrid />
+  <PostsGride />
 </section>
 
         <h2 className="text-3xl font-bold text-center my-8">
