@@ -237,7 +237,7 @@ const slides1 = [
     info: "Ən vacib günündə “Bəli” demək üçün sadəcə bir zal, dekor və musiqi deyil, unudulmaz səyahət planı da seçmək olar. Axı havadan sevgi qoxusu gəlir.",
   },
   {
-    title: "Netflix gözləyə bilər, dəniz isə yox  (İnteqrasiya)",
+    title: "Netflix gözləyə bilər, dəniz isə yox",
     info: "İstirahət yalnız Netflix və yataq deyil. Özünü günəşin, dənizin və sükutun qucağına ataraq xoşbəxtliyə sadəcə bir bilet uzaqlığda ola bilərsən.",
   },
   {
@@ -486,6 +486,17 @@ export default function Portfolio() {
                 alt: "Collab 7",
                 link: "https://www.instagram.com/p/DJo2AcoI51C/?igsh=MWFkbDVqYjJob3Nveg==",
               },
+               {
+                src: "/collab8.jpeg",
+                alt: "Collab 8",
+                link: "https://www.instagram.com/reel/DSmTFo5jTjE/?igsh=MWo0cW1jb3RmY2N5ag==",
+              },
+               {
+                src: "/collab9.jpeg",
+                alt: "Collab 9",
+                link: "https://www.instagram.com/reel/DR4B8eljNc-/?igsh=MWF1ajlxbWpscmI0bA==",
+              },
+  
             ].map((item, i) => (
               <a
                 key={i}
