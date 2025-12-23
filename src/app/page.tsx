@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import PostsGride from "./PostsGrid";
+import VideosGrid from "./VideoPost";
 
 const projects = [
   {
@@ -345,6 +346,14 @@ export default function Portfolio() {
     Carousel Posts
   </h2>
   <PostsGride />
+</section>
+
+
+<section className="my-10">
+  <h2 className="text-3xl font-bold text-center mb-6">
+    Video Carousel Posts
+  </h2>
+  <VideosGrid />
 </section>
 
         <h2 className="text-3xl font-bold text-center my-8">
