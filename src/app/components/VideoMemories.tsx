@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 const videos: string[] = [
   "/videos/zaman (1).mp4",
@@ -21,23 +21,52 @@ const videos: string[] = [
 ];
 
 const VideoMemories: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleEnded = () => {
+    setCurrentIndex((prev) => (prev + 1) % videos.length);
+  };
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.load();
+      videoRef.current.play().catch(() => {});
+    }
+  }, [currentIndex]);
+
   return (
-    <section className="max-w-7xl mx-auto px-4 py-10">
+    <section className="max-w-5xl mx-auto px-4 py-10">
       <h2 className="text-4xl text-[#e3e1c9] font-bold mb-8 text-center">
-        Even after all this time, the reason for our laughter is still them!
+        Memories that make us smile!
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
+      <div className="flex justify-center mb-4">
+        <div className="rounded-xl overflow-hidden">
+          <video
+            ref={videoRef}
+            src={videos[currentIndex]}
+            controls
+            onEnded={handleEnded}
+            className="w-full h-[200px] md:h-[600px] object-cover"
+          />
+        </div>
+      </div>
+
+      <div className="hidden md:flex gap-2">
         {videos.map((video, i) => (
           <div
             key={i}
-            className="rounded-xl shadow-lg overflow-hidden bg-black"
+            onClick={() => setCurrentIndex(i)}
+            className={`flex-1 cursor-pointer border-4 ${
+              currentIndex === i ? "border-yellow-400" : "border-transparent"
+            }`}
           >
             <video
               src={video}
-              controls
+              className="w-full h-24 object-cover rounded"
+              muted
               preload="metadata"
-              className="w-full h-auto object-cover"
             />
           </div>
         ))}
