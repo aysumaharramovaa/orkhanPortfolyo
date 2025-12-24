@@ -1,6 +1,7 @@
 "use client";
 
-import React from "react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 type Slide = {
   title: string;
@@ -46,54 +47,67 @@ const slides: Slide[] = [
   },
 ];
 
-const AparRide: React.FC = () => {
+export default function AparRideCarousel() {
+  const [index, setIndex] = useState(0);
+
+  const next = () => setIndex((i) => (i + 1) % slides.length);
+  const prev = () => setIndex((i) => (i - 1 + slides.length) % slides.length);
+
   return (
-    <section className="max-w-7xl mx-auto px-4 py-10">
-      <h2 className="text-4xl text-[#e3e1c9] font-bold mb-10 text-center">
+    <section className="max-w-4xl mx-auto px-4 py-20 text-center rounded-3xl">
+      <h2 className="text-4xl font-bold text-[#e3e1c9] mb-12">
         25TREND x APAR RIDE
       </h2>
 
-      <h3 className="text-2xl font-semibold mb-6 text-center text-[#ededed]">
-        Bakıda velosipedlə edilə biləcək şeylər 🚴
-      </h3>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {slides.map(({ title, info }, idx) => (
-          <div
-            key={idx}
-            className="bg-[#89986D] border border-[#89986D] rounded-2xl p-6 shadow-md
-                       hover:shadow-xl hover:-translate-y-1 transition-all duration-300
-                       ease-in-out group cursor-pointer"
+      <div className="relative overflow-hidden">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 24, scale: 0.97 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -24, scale: 0.97 }}
+            transition={{ duration: 0.45, ease: "easeInOut" }}
+            whileHover={{ scale: 1.02 }} 
+            className="bg-[#9AAA7B] rounded-3xl p-10 shadow-xl min-h-[260px] flex flex-col justify-center"
           >
-            <h4 className="text-2xl font-bold mb-3 text-white group-hover:text-[#b3ada8] transition">
-              {title}
-            </h4>
-            <p className="text-[#e3e1c9] group-hover:text-[#f0eeeb] transition">
-              {info}
+            <h3 className="text-3xl font-bold text-white mb-4">
+              {slides[index].title}
+            </h3>
+
+            <p className="text-[#F4F3EE] text-lg leading-relaxed">
+              {slides[index].info}
             </p>
-          </div>
-        ))}
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Navigation */}
+        <div className="flex justify-between mt-10">
+          <button
+            onClick={prev}
+            className="px-6 py-2 rounded-full bg-white/20 text-white hover:bg-white/30 transition"
+          >
+            ←
+          </button>
+          <button
+            onClick={next}
+            className="px-6 py-2 rounded-full bg-white/20 text-white hover:bg-white/30 transition"
+          >
+            →
+          </button>
+        </div>
       </div>
 
-      <div className="mt-14 text-center max-w-xl mx-auto">
-        <p className="text-lg mb-4">
-          Bəs sən nə vaxt pedal çevirməyi planlayırsan? 🚴‍♂
-        </p>
-
-        <p className="text-[#F9F3EF] mb-6">
-          Bəlkə də bu post o “ilk pedal” idi. Həm rahat, həm sərfəli, həm də
-          tam sənə uyğun bir yol axtarırdınsa — artıq tapmısan.
-          <br />
-          <span className="font-semibold">APAR RIDE</span> ilə günü dolğun keçirmək mümkündür.
-          Qrafik yox, əhvalın sənə yol göstərsin. 🧡
-        </p>
-
-        <p className="text-[#dad6bc] font-semibold text-lg">
-          25TREND x AparRide
-        </p>
+      {/* Indicators */}
+      <div className="flex justify-center gap-2 mt-8">
+        {slides.map((_, i) => (
+          <span
+            key={i}
+            className={`w-2.5 h-2.5 rounded-full transition ${
+              i === index ? "bg-white" : "bg-white/40"
+            }`}
+          />
+        ))}
       </div>
     </section>
   );
-};
-
-export default AparRide;
+}
