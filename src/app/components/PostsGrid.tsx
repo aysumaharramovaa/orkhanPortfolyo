@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-// şəkillər
 const sebrImages = Array.from({ length: 10 }, (_, i) => `/sebr${i || ""}.jpg`);
 const dusunImages = Array.from({ length: 8 }, (_, i) => `/dusun${i || ""}.jpg`);
 const qorxuImages = Array.from(
@@ -40,8 +39,6 @@ const weekendImages = Array.from(
 const Post = ({ images }: { images: string[] }) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-
-  // Avtomatik şəkil dəyişmə (sabit)
   useEffect(() => {
     const interval = setInterval(() => {
       if (!isPaused) setCurrentImage((prev) => (prev + 1) % images.length);
@@ -52,7 +49,6 @@ const Post = ({ images }: { images: string[] }) => {
 
   return (
     <div className="post w-full relative rounded-lg cursor-pointer overflow-hidden">
-      {/* SABİT ÖLÇÜLÜ CONTAINER */}
       <div
         onClick={() => setIsPaused((p) => !p)}
         className="relative w-full h-[500px]"
@@ -66,7 +62,6 @@ const Post = ({ images }: { images: string[] }) => {
         />
       </div>
 
-      {/* sağ-sol düymələri */}
       <button
         onClick={() =>
           setCurrentImage((prev) => (prev - 1 + images.length) % images.length)

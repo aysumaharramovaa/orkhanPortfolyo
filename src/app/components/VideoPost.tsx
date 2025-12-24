@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 
-/* ---------------- MEDIA LIST ---------------- */
 
 const post1Media = [
   "/spotify.jpg",
@@ -44,11 +43,9 @@ const post3Media = [
   "/yto8.mp4",
 ];
 
-/* ---------------- POST COMPONENT ---------------- */
-
 const Post = ({ media }: { media: string[] }) => {
   const [current, setCurrent] = useState(0);
-  const [displayed, setDisplayed] = useState(0); // ekranda olan
+  const [displayed, setDisplayed] = useState(0); 
   const [paused, setPaused] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -58,7 +55,7 @@ const Post = ({ media }: { media: string[] }) => {
   const displaySrc = media[displayed];
   const isVideo = displaySrc.endsWith(".mp4");
 
-  // Auto slide
+
   useEffect(() => {
     if (paused) return;
 
@@ -69,7 +66,6 @@ const Post = ({ media }: { media: string[] }) => {
     return () => clearInterval(interval);
   }, [paused, media.length]);
 
-  // Change with fade
   useEffect(() => {
     if (current === displayed) return;
 
@@ -77,12 +73,12 @@ const Post = ({ media }: { media: string[] }) => {
 
     const timeout = setTimeout(() => {
       setDisplayed(current);
-    }, 250); // fade-out vaxtı
+    }, 250); 
 
     return () => clearTimeout(timeout);
   }, [current, displayed]);
 
-  // Video play
+ 
   useEffect(() => {
     if (!isVideo || !videoRef.current) return;
 
@@ -92,7 +88,7 @@ const Post = ({ media }: { media: string[] }) => {
 
   return (
     <div className="relative w-full h-[500px] rounded-lg overflow-hidden bg-black">
-      {/* MEDIA */}
+
       <div
         onClick={() => setPaused((p) => !p)}
         className="w-full h-full cursor-pointer relative"
@@ -122,7 +118,7 @@ const Post = ({ media }: { media: string[] }) => {
         )}
       </div>
 
-      {/* LEFT */}
+
       <button
         onClick={() =>
           setCurrent((p) => (p - 1 + media.length) % media.length)
@@ -132,7 +128,7 @@ const Post = ({ media }: { media: string[] }) => {
         ◀
       </button>
 
-      {/* RIGHT */}
+
       <button
         onClick={() =>
           setCurrent((p) => (p + 1) % media.length)
@@ -145,7 +141,6 @@ const Post = ({ media }: { media: string[] }) => {
   );
 };
 
-/* ---------------- POSTS GRID ---------------- */
 
 const VideosGrid = () => {
   return (

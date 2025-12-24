@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useState } from "react";
 
-
 const projects = [
   {
     id: 1,
@@ -14,39 +13,40 @@ const projects = [
   },
   {
     id: 2,
+    name: "'AzTube'da Nə İzləyək?",
+    instagramLink:
+      "https://www.instagram.com/p/DK4OBjqNx3Z/?img_index=1&igsh=MTFlbWZ0NG14d2xnYw%3D%3D",
+    imageUrl: "/seven.jpg",
+  },
+  {
+    id: 3,
+    name: "Yemək Yeyəndə Nə İzləyək ?",
+    instagramLink:
+      "https://www.instagram.com/p/DPBS7HVDPEh/?utm_source=ig_web_copy_link&igsh=bTNiMWVzN2RrbmU5",
+    imageUrl: "/yemek2.jpg",
+  },
+  {
+    id: 4,
+    name: "AzTube'da Nə İzləyək?",
+    instagramLink:
+      "https://www.instagram.com/p/DN0DBSmWBmG/?utm_source=ig_web_copy_link&igsh=a2FmNWxmNWxzbmdw",
+    imageUrl: "/aztube.jpg",
+  },
+  {
+    id: 5,
+    name: "Yayda İzləməli Olduğunuz Filmlər",
+    instagramLink:
+      "https://www.instagram.com/p/DKwJVoTNsfh/?img_index=5&igsh=MXU3MTYzYWJrYTNxMw%3D%3D",
+    imageUrl: "/eight.jpg",
+  },
+  {
+    id: 6,
     name: "Bakı Kinoteatrlarında Nə İzləyək ?",
     instagramLink:
       "https://www.instagram.com/p/DM2BaYbtGnL/?igsh=NTNpa2UxNTdvdWZl",
     imageUrl: "/kino.jpg",
   },
-  {
-    id: 3,
-    name: "Həftəsonunu Harda Keçirək?",
-    instagramLink:
-      "https://www.instagram.com/p/DNVJUJttupy/?img_index=9&igsh=MTM3ZWZ6aHFsMWlmeg%3D%3D",
-    imageUrl: "/eleven.jpg",
-  },
-  {
-    id: 4,
-    name: "NƏSƏ etməlisən, amma heç cürə başlaya bilmirsən?",
-    instagramLink:
-      "https://www.instagram.com/p/DMsCh69N0xV/?igsh=OHVuenp3bHo4ejEx",
-    imageUrl: "/ten.jpg",
-  },
-  {
-    id: 5,
-    name: "Artıq Eyni Zövqü Verməyən Şeylər",
-    instagramLink:
-      "https://www.instagram.com/p/DLmRX5eNE3C/?igsh=aGI2eDhpOTFjajBs&img_index=10",
-    imageUrl: "/one.jpg",
-  },
-  {
-    id: 6,
-    name: "gen-z love",
-    instagramLink:
-      "https://www.instagram.com/p/DKzJOrztb9B/?igsh=MXRwY256ODByYXVtbw%3D%3D",
-    imageUrl: "/two.jpg",
-  },
+
   {
     id: 7,
     name: "Vaxtında Qədrini Bilmədiyimiz Şeylər",
@@ -77,18 +77,20 @@ const projects = [
   },
   {
     id: 11,
-    name: "'AzTube'da Nə Izləyək?",
+    name: "gen-z love",
     instagramLink:
-      "https://www.instagram.com/p/DK4OBjqNx3Z/?img_index=1&igsh=MTFlbWZ0NG14d2xnYw%3D%3D",
-    imageUrl: "/seven.jpg",
+      "https://www.instagram.com/p/DKzJOrztb9B/?igsh=MXRwY256ODByYXVtbw%3D%3D",
+    imageUrl: "/two.jpg",
   },
+
   {
     id: 12,
-    name: "Yayda İzləməli Olduğunuz Filmlər",
+    name: "Artıq Eyni Zövqü Verməyən Şeylər",
     instagramLink:
-      "https://www.instagram.com/p/DKwJVoTNsfh/?img_index=5&igsh=MXU3MTYzYWJrYTNxMw%3D%3D",
-    imageUrl: "/eight.jpg",
+      "https://www.instagram.com/p/DLmRX5eNE3C/?igsh=aGI2eDhpOTFjajBs&img_index=10",
+    imageUrl: "/one.jpg",
   },
+
   {
     id: 13,
     name: "Ürəyində Nəsə Küsülüsən, Çünki...",
@@ -126,10 +128,10 @@ const projects = [
   },
   {
     id: 18,
-    name: "Yemək Yeyəndə Nə İzləyək ?",
+    name: "Həftəsonunu Harda Keçirək?",
     instagramLink:
-      "https://www.instagram.com/p/DPBS7HVDPEh/?utm_source=ig_web_copy_link&igsh=bTNiMWVzN2RrbmU5",
-    imageUrl: "/yemek2.jpg",
+      "https://www.instagram.com/p/DNVJUJttupy/?img_index=9&igsh=MTM3ZWZ6aHFsMWlmeg%3D%3D",
+    imageUrl: "/eleven.jpg",
   },
   {
     id: 19,
@@ -166,29 +168,29 @@ const projects = [
       "https://www.instagram.com/p/DOVedbqjBM7/?utm_source=ig_web_copy_link&igsh=MTVld283cm1iNzF1aw==",
     imageUrl: "/xerite.jpg",
   },
+
   {
     id: 24,
-    name: "Tədbirdə Davranış Qaydaları",
-    instagramLink:
-      "https://www.instagram.com/p/DOQQTFTDHE-/?utm_source=ig_web_copy_link&igsh=MWliOG02eW96dno4dg==",
-    imageUrl: "/boolood.jpg",
-  },
-  {
-    id: 25,
     name: "Həyatında NƏSƏ Sevgi Çatışmır, Çünki...",
     instagramLink:
       "https://www.instagram.com/p/DNsNV5NWM2i/?utm_source=ig_web_copy_link&igsh=c2twd3lqMzRvOWNx",
     imageUrl: "/sevgi.jpg",
   },
   {
-    id: 26,
-    name: "AzTube'da Nə İzləyək?",
+    id: 25,
+    name: "Tədbirdə Davranış Qaydaları",
     instagramLink:
-      "https://www.instagram.com/p/DN0DBSmWBmG/?utm_source=ig_web_copy_link&igsh=a2FmNWxmNWxzbmdw",
-    imageUrl: "/aztube.jpg",
+      "https://www.instagram.com/p/DOQQTFTDHE-/?utm_source=ig_web_copy_link&igsh=MWliOG02eW96dno4dg==",
+    imageUrl: "/boolood.jpg",
+  },
+  {
+    id: 26,
+    name: "NƏSƏ etməlisən, amma heç cürə başlaya bilmirsən?",
+    instagramLink:
+      "https://www.instagram.com/p/DMsCh69N0xV/?igsh=OHVuenp3bHo4ejEx",
+    imageUrl: "/ten.jpg",
   },
 ];
-
 
 export default function WorksPage() {
   const [visibleCount, setVisibleCount] = useState(8);
@@ -197,7 +199,6 @@ export default function WorksPage() {
 
   return (
     <>
-   
       <h2 className="text-3xl text-[#e3e1c9] font-bold text-center my-8">
         Content stories created for <b>25TREND</b>
       </h2>

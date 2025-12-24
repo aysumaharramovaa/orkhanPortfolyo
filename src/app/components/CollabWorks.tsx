@@ -64,7 +64,6 @@ export default function CollabWorks() {
             rel="noopener noreferrer"
             className="relative overflow-hidden rounded-2xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
           >
-            {/* Ölçü DƏYİŞMƏYİB */}
             <img
               src={item.src}
               alt={item.alt}
