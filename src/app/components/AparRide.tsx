@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 type Slide = {
@@ -49,12 +49,29 @@ const slides: Slide[] = [
 
 export default function AparRideCarousel() {
   const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
 
-  const next = () => setIndex((i) => (i + 1) % slides.length);
-  const prev = () => setIndex((i) => (i - 1 + slides.length) % slides.length);
+  const next = () =>
+    setIndex((i) => (i + 1) % slides.length);
+  const prev = () =>
+    setIndex((i) => (i - 1 + slides.length) % slides.length);
+
+  useEffect(() => {
+    if (paused) return;
+
+    const interval = setInterval(() => {
+      setIndex((i) => (i + 1) % slides.length);
+    }, 4000); 
+
+    return () => clearInterval(interval);
+  }, [paused]);
 
   return (
-    <section className="max-w-4xl mx-auto px-4 py-20 text-center rounded-3xl">
+    <section
+      className="max-w-4xl mx-auto px-4 py-20 text-center  rounded-3xl"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
       <h2 className="text-4xl font-bold text-[#e3e1c9] mb-12">
         25TREND x APAR RIDE
       </h2>
@@ -67,7 +84,7 @@ export default function AparRideCarousel() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -24, scale: 0.97 }}
             transition={{ duration: 0.45, ease: "easeInOut" }}
-            whileHover={{ scale: 1.02 }} 
+            whileHover={{ scale: 1.02 }}
             className="bg-[#9AAA7B] rounded-3xl p-10 shadow-xl min-h-[260px] flex flex-col justify-center"
           >
             <h3 className="text-3xl font-bold text-white mb-4">
@@ -80,16 +97,22 @@ export default function AparRideCarousel() {
           </motion.div>
         </AnimatePresence>
 
-        {/* Navigation */}
+        {/* Arrows */}
         <div className="flex justify-between mt-10">
           <button
-            onClick={prev}
+            onClick={() => {
+              setPaused(true);
+              prev();
+            }}
             className="px-6 py-2 rounded-full bg-white/20 text-white hover:bg-white/30 transition"
           >
             ←
           </button>
           <button
-            onClick={next}
+            onClick={() => {
+              setPaused(true);
+              next();
+            }}
             className="px-6 py-2 rounded-full bg-white/20 text-white hover:bg-white/30 transition"
           >
             →
@@ -97,7 +120,6 @@ export default function AparRideCarousel() {
         </div>
       </div>
 
-      {/* Indicators */}
       <div className="flex justify-center gap-2 mt-8">
         {slides.map((_, i) => (
           <span
