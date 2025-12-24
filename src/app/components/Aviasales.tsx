@@ -1,6 +1,7 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 type Slide = {
   title: string;
@@ -46,49 +47,65 @@ const slides1: Slide[] = [
   },
 ];
 
-const Aviasales: React.FC = () => {
+const Carousel: React.FC = () => {
+  const [current, setCurrent] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides1.length);
+    }, 7000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleDotClick = (index: number) => {
+    setCurrent(index);
+    setPaused(true);
+  };
+
   return (
-    <section className="max-w-6xl mx-auto px-4 py-10">
-      <h2 className="text-4xl text-[#e3e1c9] font-bold mb-8 text-center">
+    <section className="max-w-3xl mx-auto text-[#e3e1c9]">
+      <h2 className="text-4xl font-bold mb-8 text-center">
         25TREND x Aviasales
       </h2>
 
-      <h3 className="text-2xl font-semibold mb-6 text-center text-[#ededed]">
-        Bakıda səyahət və kəşf ediləcək möhtəşəm anlar ✈️ <br />
-        NƏSƏ Səyahət Üçün Ürəyin Gedir, Çünki...
-      </h3>
+      <div className="relative w-full h-64 md:h-60 lg:h-72 overflow-hidden">
+        <AnimatePresence>
+          {slides1.map((slide, index) =>
+            index === current ? (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 0.8 }}
+                className="absolute w-full h-full p-6 rounded-lg shadow-lg cursor-pointer
+                           flex flex-col justify-center"
+                whileHover={{ scale: 1.03 }}
+              >
+                <h3 className="text-2xl text-[#F4F3EE] font-semibold mb-3">
+                  {slide.title}
+                </h3>
+               <p className="text-xl text-[#e3e1c9]">{slide.info}</p>
+              </motion.div>
+            ) : null
+          )}
+        </AnimatePresence>
 
-      <div className=" min-h-screen py-12 px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {slides1.map(({ title, info }, i) => (
-            <div
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {slides1.map((_, i) => (
+            <button
               key={i}
-              className={`p-6 rounded-lg shadow-lg cursor-pointer transition
-          ${i % 2 === 0 ? "bg-[#e3e1c9]" : "bg-[#F9F3EF]"}`}
-            >
-              <h3 className="text-[#5c6d40] text-xl font-semibold mb-3">
-                {title}
-              </h3>
-              <p className="text-[#5c6d40]">{info}</p>
-            </div>
+              className={`w-3 h-3 rounded-full ${
+                i === current ? "bg-white" : "bg-[#9AAA7B]"
+              }`}
+              onClick={() => handleDotClick(i)}
+            />
           ))}
         </div>
-      </div>
-
-      <div className="mt-14 text-center max-w-xl mx-auto">
-        <p className="text-lg mb-4">
-          Bəs sən neçə vaxtdır xəritəyə baxıb köçmək istədiyin ölkəni
-          izləyirsən? 🌍
-        </p>
-        <p className=" mb-6 text-[#ededed]">
-          Xəyallarını gerçəkləşdirmək üçün addım atmaq lazımdır. Bəlkə də bu
-          postu görmək o “birinci addım”ın özü idi. Arzularına qovuşmaq üçün
-          lazım olan tək şey Aviasales-də uyğun bileti tapmaqdır. Sonra çamadan,
-          pasport, story və səni gözləyən komforlu bir səyahət. 🤠
-        </p>
       </div>
     </section>
   );
 };
-
-export default Aviasales;
+export default Carousel;
