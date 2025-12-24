@@ -299,18 +299,18 @@ export default function Portfolio() {
   };
 
   return (
-    <div className="bg-[#113F67]">
-      <div className="min-h-screen text-[#FDF5AA] flex flex-col">
-        <div className="min-h-screen flex flex-col items-center justify-center px-4 text-[#FDF5AA] ">
+    <div className=" bg-[#89986D]">
+      <div className="min-h-screen  flex flex-col">
+        <div className="min-h-screen flex flex-col items-center justify-center px-4  ">
           <div className="text-center space-y-4">
             <h1
               className="text-5xl font-bold tracking-wide"
               style={{ fontFamily: "var(--font-geist-sans)" }}
             >
-              Orkhan Gurbanli
+              Orkhan Gurbanli 
             </h1>
             <p
-              className="text-2xl text-[#58A0C8] font-medium"
+              className="text-2xl text-[#FDF5AA] font-medium"
               style={{ fontFamily: "var(--font-geist-mono)" }}
             >
               Content Creator & Copywriter
@@ -323,7 +323,7 @@ export default function Portfolio() {
                 href="https://www.linkedin.com/in/orkhan-gurbanli-405043297/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-3 rounded-lg text-white bg-[#58A0C8] hover:bg-[#34699A] transition-colors"
+                className="px-8 py-3 rounded-lg text-[#e5e3d0] bg-[#c3c4a8] hover:bg-[#34699A] transition-colors"
                 style={{ fontFamily: "var(--font-geist-mono)" }}
               >
                 LinkedIn
@@ -331,7 +331,7 @@ export default function Portfolio() {
 
               <a
                 href="mailto:orkhankhurban@gmail.com"
-                className="px-8 py-3 rounded-lg text-white bg-[#58A0C8] hover:bg-[#34699A] transition-colors"
+                className="px-8 py-3 rounded-lg text-[#e5e3d0] bg-[#c3c4a8] hover:bg-[#34699A] transition-colors"
                 style={{ fontFamily: "var(--font-geist-mono)" }}
               >
                 Email
@@ -341,8 +341,8 @@ export default function Portfolio() {
         </div>
 
 
-<section className="my-10">
-  <h2 className="text-3xl font-bold text-center mb-6">
+<section className="my-10 pt-5 bg-[#89986D]">
+  <h2 className="text-3xl text-[#e3e1c9] font-bold text-center mb-6">
     Carousel Posts
   </h2>
   <PostsGride />
@@ -350,111 +350,14 @@ export default function Portfolio() {
 
 
 <section className="my-10">
-  <h2 className="text-3xl font-bold text-center mb-6">
+  <h2 className="text-3xl  text-[#e3e1c9] font-bold text-center mb-6">
     Video Carousel Posts
   </h2>
   <VideosGrid />
 </section>
 
-        <h2 className="text-3xl font-bold text-center my-8">
-          Content stories created for <b>25TREND</b>
-        </h2>
-        <section
-          className="overflow-hidden py-10"
-          // onMouseEnter={() => setIsPaused(true)}
-          // onMouseLeave={() => setIsPaused(false)}
-        >
-          <div
-            className={`grid gap-6 px-6 animate-slide ${
-              isPaused ? "paused" : ""
-            } grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4`}
-          >
-            {projects.slice(0, visibleCount).map((project, i) => (
-              <a
-                key={i}
-                href={project.instagramLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-lg p-4 text-[#113F67] shadow-lg flex flex-col justify-between cursor-pointer transition-all duration-300 transform hover:scale-105 hover:rotate-1 hover:shadow-2xl animate-[scaleUp_0.6s_ease-out_forwards]"
-                style={{
-                  backgroundColor: "#FDF5AA",
-                  animationDelay: `${i * 0.15}s`,
-                }}
-              >
-                <Image
-                  src={project.imageUrl}
-                  alt={project.name}
-                  width={250}
-                  height={250}
-                  className="rounded-md mb-4 w-full object-cover"
-                />
-                <p className="font-semibold">- {project.name}</p>
-              </a>
-            ))}
-          </div>
-
-          {/* See More düyməsi */}
-          {visibleCount < projects.length && (
-            <div className="text-center mt-6">
-              <button
-                onClick={handleSeeMore}
-                className="px-6 py-2 bg-[#FDF5AA] text-[#113F67] rounded-lg shadow hover:bg-[#c9c491] transition-all duration-300"
-              >
-                See More
-              </button>
-            </div>
-          )}
-
-          <style jsx>{`
-            @keyframes scaleUp {
-              0% {
-                transform: scale(0.9);
-                opacity: 0;
-              }
-              100% {
-                transform: scale(1);
-                opacity: 1;
-              }
-            }
-          `}</style>
-
-          {/* <style jsx>{`
-        @keyframes slide {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-
-        .animate-slide {
-          animation: slide 25s linear infinite;
-        }
-        .paused {
-          animation-play-state: paused !important;
-        }
-      `}</style> */}
-        </section>
-
-        <section className="bg-[#113F67] text-[#FDF5AA] py-10">
-          <h2 className="text-4xl font-bold mb-8 text-center">
-            Listen to the voice within yourself!
-          </h2>
-          <div className="max-w-[600px] mx-auto rounded-xl shadow-2xl overflow-hidden">
-            <video
-              src="/videos/video1.mp4"
-              controls
-              autoPlay
-              loop
-              muted
-              className="w-full h-auto object-cover"
-            />
-          </div>
-        </section>
-
   <section className="max-w-6xl mx-auto px-4 py-10">
-          <h2 className="text-4xl font-bold mb-8 text-center">
+          <h2 className="text-4xl  text-[#e3e1c9] font-bold mb-8 text-center">
             Collab Works 
           </h2>
 
@@ -524,8 +427,107 @@ export default function Portfolio() {
           </div>
         </section>
 
+        <h2 className="text-3xl text-[#e3e1c9] font-bold text-center my-8">
+          Content stories created for <b>25TREND</b>
+        </h2>
+        <section
+          className="overflow-hidden py-10"
+          // onMouseEnter={() => setIsPaused(true)}
+          // onMouseLeave={() => setIsPaused(false)}
+        >
+          <div
+            className={`grid gap-6 px-6 animate-slide ${
+              isPaused ? "paused" : ""
+            } grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4`}
+          >
+            {projects.slice(0, visibleCount).map((project, i) => (
+              <a
+                key={i}
+                href={project.instagramLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg p-4 text-[#5c6d40] shadow-lg flex flex-col justify-between cursor-pointer transition-all duration-300 transform hover:scale-105 hover:rotate-1 hover:shadow-2xl animate-[scaleUp_0.6s_ease-out_forwards]"
+                style={{
+                  backgroundColor: "#e3e1c9",
+                  animationDelay: `${i * 0.15}s`,
+                }}
+              >
+                <Image
+                  src={project.imageUrl}
+                  alt={project.name}
+                  width={250}
+                  height={250}
+                  className="rounded-md mb-4 w-full object-cover"
+                />
+                <p className="font-semibold">- {project.name}</p>
+              </a>
+            ))}
+          </div>
+
+          {/* See More düyməsi */}
+          {visibleCount < projects.length && (
+            <div className="text-center mt-6">
+              <button
+                onClick={handleSeeMore}
+                className="px-6 py-2 bg-[#e3e1c9] text-[#5c6d40] rounded-lg shadow hover:bg-[#c9c491] transition-all duration-300"
+              >
+                See More
+              </button>
+            </div>
+          )}
+
+          <style jsx>{`
+            @keyframes scaleUp {
+              0% {
+                transform: scale(0.9);
+                opacity: 0;
+              }
+              100% {
+                transform: scale(1);
+                opacity: 1;
+              }
+            }
+          `}</style>
+
+          {/* <style jsx>{`
+        @keyframes slide {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        .animate-slide {
+          animation: slide 25s linear infinite;
+        }
+        .paused {
+          animation-play-state: paused !important;
+        }
+      `}</style> */}
+        </section>
+
+        <section className=" bg-[#89986D] text-[#e3e1c9] py-10">
+          <h2 className="text-4xl font-bold mb-8 text-center">
+            Listen to the voice within yourself!
+          </h2>
+          <div className="max-w-[600px] mx-auto rounded-xl shadow-2xl overflow-hidden">
+            <video
+              src="/videos/video1.mp4"
+              controls
+              autoPlay
+              loop
+              muted
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </section>
+
+
+
         <section className="max-w-7xl mx-auto px-4 py-10">
-          <h2 className="text-4xl font-bold mb-10 text-center">
+          <h2 className="text-4xl  text-[#e3e1c9] font-bold mb-10 text-center">
             25TREND x APAR RIDE
           </h2>
           <h3 className="text-2xl font-semibold mb-6 text-center text-[#ededed]">
@@ -536,12 +538,12 @@ export default function Portfolio() {
             {slides.map(({ title, info }, idx) => (
               <div
                 key={idx}
-                className="bg-gradient-to-br from-[#456882] to-[#4a5a67] border border-[#4a5a67] rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out group cursor-pointer"
+                className="bg-[#89986D] from-[#89986D] to-[#89986D] border border-[#89986D] rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out group cursor-pointer"
               >
                 <h4 className="text-2xl font-bold mb-3 text-white group-hover:text-[#b3ada8] transition">
                   {title}
                 </h4>
-                <p className="text-[#cfcbc7] group-hover:text-[#f0eeeb] transition">
+                <p className="text-[#e3e1c9] group-hover:text-[#f0eeeb] transition">
                   {info}
                 </p>
               </div>
@@ -558,14 +560,14 @@ export default function Portfolio() {
               ilə günü dolğun keçirmək mümkündür. Qrafik yox, əhvalın sənə yol
               göstərsin. 🧡
             </p>
-            <p className="text-indigo-600 font-semibold text-lg">
+            <p className="text-[#dad6bc] font-semibold text-lg">
               25TREND x AparRide
             </p>
           </div>
         </section>
 
 
-        <section className="bg-[#113F67] text-[#FDF5AA] py-10 px-4">
+        <section className=" text-[#FDF5AA] py-10 px-4">
           <h2 className="text-4xl font-bold mb-6 text-center">
             How about getting to know the world of animation up close?
           </h2>
@@ -583,18 +585,20 @@ export default function Portfolio() {
               href="https://www.instagram.com/reel/DOS64BcjH8u/?utm_source=ig_web_copy_link&igsh=bWZ1cmN0d3pkZDZo"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 bg-[#FDF5AA] text-[#113F67] rounded-lg shadow hover:bg-[#c9c491] transition-colors"
+               className="px-6 py-2 bg-[#e3e1c9] text-[#5c6d40] rounded-lg shadow hover:bg-[#c9c491] transition-all duration-300"
             >
               Instagram Link
             </a>
           </div>
         </section>
 
+        
+
         <h2 className="text-3xl font-bold text-center my-8">
           <span className="block md:inline">
             Powerful stories told through words
           </span>{" "}
-          <b className="block md:inline">ArxaParta</b>
+          <b className="block md:inline text-[#e3e1c9]">ArxaParta</b>
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -678,7 +682,7 @@ export default function Portfolio() {
       </div>
 
       <section className="max-w-6xl mx-auto px-4 py-10">
-        <h2 className="text-4xl font-bold mb-8 text-center">
+        <h2 className="text-4xl text-[#e3e1c9] font-bold mb-8 text-center">
           25TREND x Aviasales
         </h2>
 
@@ -687,18 +691,18 @@ export default function Portfolio() {
           NƏSƏ Səyahət Üçün Ürəyin Gedir, Çünki...
         </h3>
 
-        <div className="bg-[#113F67] min-h-screen py-12 px-6">
+        <div className=" min-h-screen py-12 px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {slides1.map(({ title, info }, i) => (
               <div
                 key={i}
                 className={`p-6 rounded-lg shadow-lg cursor-pointer transition
-          ${i % 2 === 0 ? "bg-[#D2C1B6]" : "bg-[#F9F3EF]"}`}
+          ${i % 2 === 0 ? "bg-[#e3e1c9]" : "bg-[#F9F3EF]"}`}
               >
-                <h3 className="text-[#1B3C53] text-xl font-semibold mb-3">
+                <h3 className="text-[#5c6d40] text-xl font-semibold mb-3">
                   {title}
                 </h3>
-                <p className="text-[#1B3C53]">{info}</p>
+                <p className="text-[#5c6d40]">{info}</p>
               </div>
             ))}
           </div>
@@ -718,7 +722,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <h2 className="text-4xl font-bold mb-8 text-center">
+      <h2 className="text-4xl text-[#e3e1c9] font-bold mb-8 text-center">
         Even after all this time, the reason for our laughter is still them!
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
@@ -733,7 +737,7 @@ export default function Portfolio() {
         ))}
       </div>
 
-      <footer className="w-full py-6 text-center text-sm text-gray-500">
+      <footer className="w-full py-6 text-center text-sm text-[#e3e1c9]">
         © 2025. All rights reserved.
       </footer>
     </div>
