@@ -146,7 +146,7 @@ export default function Portfolio() {
       </div>
 
       <footer className="w-full py-6 text-center text-sm text-[#e3e1c9]">
-        © 2026 Orkhan Gurbanli. All rights reserved.
+        © 2026 Orkhan Gurbanli. 
       </footer>
     </div>
   );
