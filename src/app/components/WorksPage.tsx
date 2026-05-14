@@ -5,6 +5,13 @@ import { useState } from "react";
 
 const projects = [
   {
+    id: 34,
+    name: " Gen-Z dili və ədəbiyyatı",
+    instagramLink:
+    "https://www.instagram.com/p/DW8W8ogjOXw/?img_index=2&igsh=MWt4em14czB6YWh3MA%3D%3D",
+    imageUrl: "/genz.jpg",
+  },
+  {
     id: 33,
     name: "Bizi Qurtaracaq Kimi Görünüb Bataqlığa Salan Şeylər",
     instagramLink:

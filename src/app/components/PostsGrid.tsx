@@ -8,7 +8,8 @@ const dusunImages = Array.from({ length: 8 }, (_, i) => `/dusun${i || ""}.jpg`);
 const qorxuImages = Array.from(
   { length: 11 },
   (_, i) => `/qorxu${i || ""}.jpg`
-);
+);    
+
 const anImages = Array.from({ length: 10 }, (_, i) => `/an${i || ""}.jpg`);
 const neseImages = Array.from({ length: 10 }, (_, i) => `/nese${i || ""}.jpg`);
 const ferqliImages = Array.from(
@@ -83,6 +84,9 @@ const Post = ({ images }: { images: string[] }) => {
 const PostsGrid = () => {
   return (
     <div className="flex flex-wrap gap-4 justify-center">
+      {/* <div className="w-full sm:w-1/2 lg:w-1/4">
+        <Post images={} />
+      </div> */}
       <div className="w-full sm:w-1/2 lg:w-1/4">
         <Post images={spImages} />
       </div>
