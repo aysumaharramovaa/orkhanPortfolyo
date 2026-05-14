@@ -3,39 +3,53 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
+const maraqImages = Array.from(
+  { length: 9 },
+  (_, i) => `/maraq${i || ""}.jpg`,
+);
+const rickmortyImages = Array.from(
+  { length: 9 },
+  (_, i) => `/rickmorty${i || ""}.jpg`,
+);
+const nostaljiImages = Array.from(
+  { length: 11 },
+  (_, i) => `/nostalji${i || ""}.jpg`,
+);
+const melanxoniyaImages = Array.from(
+  { length: 10 },
+  (_, i) => `/melanxoniya${i || ""}.jpg`,
+);
 const sebrImages = Array.from({ length: 10 }, (_, i) => `/sebr${i || ""}.jpg`);
 const dusunImages = Array.from({ length: 8 }, (_, i) => `/dusun${i || ""}.jpg`);
 const qorxuImages = Array.from(
   { length: 11 },
-  (_, i) => `/qorxu${i || ""}.jpg`
-);    
+  (_, i) => `/qorxu${i || ""}.jpg`,
+);
 
 const anImages = Array.from({ length: 10 }, (_, i) => `/an${i || ""}.jpg`);
 const neseImages = Array.from({ length: 10 }, (_, i) => `/nese${i || ""}.jpg`);
 const ferqliImages = Array.from(
   { length: 9 },
-  (_, i) => `/ferqlii${i || ""}.jpg`
+  (_, i) => `/ferqlii${i || ""}.jpg`,
 );
 const spImages = Array.from({ length: 9 }, (_, i) => `/sp${i || ""}.jpg`);
 const sfImages = Array.from({ length: 11 }, (_, i) => `/sf${i || ""}.jpg`);
 const dovsanImages = Array.from(
   { length: 10 },
-  (_, i) => `/dovsan${i || ""}.jpg`
+  (_, i) => `/dovsan${i || ""}.jpg`,
 );
 const wrongImages = Array.from(
   { length: 10 },
-  (_, i) => `/wrong${i || ""}.jpg`
+  (_, i) => `/wrong${i || ""}.jpg`,
 );
 const santaImages = Array.from(
   { length: 10 },
-  (_, i) => `/santa${i || ""}.jpg`
+  (_, i) => `/santa${i || ""}.jpg`,
 );
 const weekendImages = Array.from(
   { length: 10 },
-  (_, i) => `/weekend${i || ""}.jpg`
+  (_, i) => `/weekend${i || ""}.jpg`,
 );
-
-
 
 const Post = ({ images }: { images: string[] }) => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -84,9 +98,18 @@ const Post = ({ images }: { images: string[] }) => {
 const PostsGrid = () => {
   return (
     <div className="flex flex-wrap gap-4 justify-center">
-      {/* <div className="w-full sm:w-1/2 lg:w-1/4">
-        <Post images={} />
-      </div> */}
+      <div className="w-full sm:w-1/2 lg:w-1/4">
+        <Post images={maraqImages} />
+      </div>
+      <div className="w-full sm:w-1/2 lg:w-1/4">
+        <Post images={rickmortyImages} />
+      </div>
+      <div className="w-full sm:w-1/2 lg:w-1/4">
+        <Post images={nostaljiImages} />
+      </div>
+      <div className="w-full sm:w-1/2 lg:w-1/4">
+        <Post images={melanxoniyaImages} />
+      </div>
       <div className="w-full sm:w-1/2 lg:w-1/4">
         <Post images={spImages} />
       </div>
@@ -121,7 +144,7 @@ const PostsGrid = () => {
         <Post images={santaImages} />
       </div>
       <div className="w-full sm:w-1/2 lg:w-1/4">
-      <Post images={weekendImages} />
+        <Post images={weekendImages} />
       </div>
     </div>
   );
