@@ -5,6 +5,56 @@ import { useState } from "react";
 
 const projects = [
   {
+    id: 33,
+    name: "Bizi Qurtaracaq Kimi Görünüb Bataqlığa Salan Şeylər",
+    instagramLink:
+      "https://www.instagram.com/p/DW3ZGa2DGU4/?igsh=MWJ0NHp6ZWtvZm8zMg%3D%3D",
+    imageUrl: "/biziqurtaracaqkimi.jpg",
+  },
+  {
+    id: 32,
+    name: "Nəsə özünü sevə bilmirsən, çünki...",
+    instagramLink:
+        "https://www.instagram.com/p/DXJSpshjHTa/?igsh=d20xeXVkNmRjZm9l",
+    imageUrl: "/Deyəsənozunusevebilmirsen.jpg", 
+
+  },
+  {
+    id: 31,
+    name: "İzləməli olduğun yeni yerli filmlər",
+    instagramLink:
+      "https://www.instagram.com/p/DXbWkCfjIHo/?img_index=1&igsh=MTZ0Z3RnYXp3aHB1dA%3D%3D",
+    imageUrl: "/yerliizle.jpg",
+  },
+  {
+    id: 30,
+    name: "Yeni çıxan Ən Maraqlı Serialar",
+    instagramLink:
+      "https://www.instagram.com/p/DXq7VDaDCrn/?igsh=MTJuNW55Y3RqZHdsNA%3D%3D&img_index=4",
+    imageUrl: "/serialamaenmaraqli.jpg",
+  },
+  {
+    id: 29,
+    name: "Köhnə Mahnıların Yeni REMAKE-LƏRİ",
+    instagramLink:
+      "https://www.instagram.com/p/DWVyfOzjOUr/?igsh=ZzN1NDJ6bGlobWR2&img_index=1",
+    imageUrl: "/mahnikohne.jpg",
+  },
+  {
+    id: 28,
+    name: "'AzTube-da izləməyə nələr var?",
+    instagramLink:
+      "https://www.instagram.com/p/DVBAoKIjAgH/?img_index=1&igsh=dXJ6bHNzaXoxNzV2",
+    imageUrl: "/youtubeepost.jpg",
+  },
+  {
+    id: 27,
+    name: "Ağıllı olmağa çalışarkən, axmaq göründüyümüz şeylər",
+    instagramLink:  
+    "https://www.instagram.com/p/DTZzuYsDDEX/?igsh=azhoc2E2MnBpeWM2",
+    imageUrl: "/agilli.jpg",
+  },
+  {
     id: 1,
     name: "Yemək Yeyəndə Nə İzləyək ?",
     instagramLink:
@@ -190,6 +240,8 @@ const projects = [
       "https://www.instagram.com/p/DMsCh69N0xV/?igsh=OHVuenp3bHo4ejEx",
     imageUrl: "/ten.jpg",
   },
+ 
+  
 ];
 
 export default function WorksPage() {
