@@ -4,11 +4,55 @@ import Image from "next/image";
 import { useState } from "react";
 
 const projects = [
+  //  {
+  //   id: ,
+  //   name: "",
+  //   instagramLink:
+  //     "",
+  //   imageUrl: "",
+  // },
+
+  {
+    id: 40,
+    name: "Əslində olmayan, amma var kimi qəbul etdiyimiz şeylər",
+    instagramLink: "https://www.instagram.com/p/DVvfsu9DBPK/?igsh=MTJqZXMzYmpzbGs4bA%3D%3D",
+    imageUrl: "/eslindeolmayan.jpg",
+  },
+
+  {
+    id: 39,
+    name: "2026-da seçimlərinin arasındakı fərq",
+    instagramLink:
+      "https://www.instagram.com/p/DS_-W2TjKyp/?igsh=aHhhN3B0N2E2OGFl&img_index=1",
+    imageUrl: "/secimlerim.jpg",
+  },
+
+  {
+    id: 37,
+    name: "Bu il səhv etdiyim şeylər",
+    instagramLink:
+      "https://www.instagram.com/p/DSmn70IjR2E/?igsh=NW0wbXcxZ29kaHZ3",
+    imageUrl: "/builsehv.jpg",
+  },
+  {
+    id: 36,
+    name: "Sevginin Rəngarəng tonu",
+    instagramLink:
+      "https://www.instagram.com/p/DUu9S5fjArk/?img_index=1&igsh=eHkzd2IzNGdzNXYy",
+    imageUrl: "/sevginintonu.jpg",
+  },
+  {
+    id: 35,
+    name: "Qadınların Lüğəti",
+    instagramLink:
+      "https://www.instagram.com/p/DVnjRdgDNj4/?igsh=MWc5Nm10MWtzNTl5MA%3D%3D",
+    imageUrl: "/qadinlar.jpg",
+  },
   {
     id: 34,
     name: " Gen-Z dili və ədəbiyyatı",
     instagramLink:
-    "https://www.instagram.com/p/DW8W8ogjOXw/?img_index=2&igsh=MWt4em14czB6YWh3MA%3D%3D",
+      "https://www.instagram.com/p/DW8W8ogjOXw/?img_index=2&igsh=MWt4em14czB6YWh3MA%3D%3D",
     imageUrl: "/genz.jpg",
   },
   {
@@ -22,9 +66,8 @@ const projects = [
     id: 32,
     name: "Nəsə özünü sevə bilmirsən, çünki...",
     instagramLink:
-        "https://www.instagram.com/p/DXJSpshjHTa/?igsh=d20xeXVkNmRjZm9l",
-    imageUrl: "/Deyəsənozunusevebilmirsen.jpg", 
-
+      "https://www.instagram.com/p/DXJSpshjHTa/?igsh=d20xeXVkNmRjZm9l",
+    imageUrl: "/Deyəsənozunusevebilmirsen.jpg",
   },
   {
     id: 31,
@@ -39,6 +82,13 @@ const projects = [
     instagramLink:
       "https://www.instagram.com/p/DXq7VDaDCrn/?igsh=MTJuNW55Y3RqZHdsNA%3D%3D&img_index=4",
     imageUrl: "/serialamaenmaraqli.jpg",
+  },
+  {
+    id: 38,
+    name: "Kimə Nə alım deyə düşünənlər üçün secret santa",
+    instagramLink:
+      "https://www.instagram.com/p/DSZZgJnjBvi/?igsh=d2hib3FjN2MycG9l",
+    imageUrl: "/kimenealim.jpg",
   },
   {
     id: 29,
@@ -57,8 +107,8 @@ const projects = [
   {
     id: 27,
     name: "Ağıllı olmağa çalışarkən, axmaq göründüyümüz şeylər",
-    instagramLink:  
-    "https://www.instagram.com/p/DTZzuYsDDEX/?igsh=azhoc2E2MnBpeWM2",
+    instagramLink:
+      "https://www.instagram.com/p/DTZzuYsDDEX/?igsh=azhoc2E2MnBpeWM2",
     imageUrl: "/agilli.jpg",
   },
   {
@@ -247,8 +297,6 @@ const projects = [
       "https://www.instagram.com/p/DMsCh69N0xV/?igsh=OHVuenp3bHo4ejEx",
     imageUrl: "/ten.jpg",
   },
- 
-  
 ];
 
 export default function WorksPage() {
