@@ -10,6 +10,7 @@ import ArkaPartaGallery from "./components/ArkaPartaGallery";
 import Aviasales from "./components/Aviasales";
 import VideoMemories from "./components/VideoMemories";
 import Emporium from "./components/Emporium";
+import Hansiyerlifilm from "./components/Hansiyerlifilm";
 
 export default function Portfolio() {
   const [isPaused, setIsPaused] = useState(false);
@@ -87,7 +88,11 @@ export default function Portfolio() {
         <section className="my-10">
           <Emporium />
         </section>
-        
+
+        <section className="my-10">
+          <Hansiyerlifilm />
+        </section>
+
         <section className="my-10">
           <WorksPage />
         </section>
