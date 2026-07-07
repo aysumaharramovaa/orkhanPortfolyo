@@ -94,19 +94,40 @@ export default function Portfolio() {
           <WorksPage />
         </section>
 
-        <section className=" bg-[#89986D] text-[#e3e1c9] py-10">
-          <h2 className="text-4xl font-bold mb-8 text-center">
-            Listen to the voice within yourself!
-          </h2>
-          <div className="max-w-[600px] mx-auto rounded-xl shadow-2xl overflow-hidden">
-            <video
-              src="/videos/video1.mp4"
-              controls
-              autoPlay
-              loop
-              muted
-              className="w-full h-auto object-cover"
-            />
+        <section className="relative overflow-hidden bg-[#89986D] text-[#e3e1c9] py-20 px-6">
+          <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#e3e1c9]/10 rounded-full blur-3xl" />
+          <div className="absolute -bottom-24 -right-24 w-72 h-72 bg-[#e3e1c9]/10 rounded-full blur-3xl" />
+
+          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center relative z-10">
+            <div>
+              <p className="uppercase tracking-[0.35em] text-sm mb-4 text-[#e3e1c9]/70">
+                25TREND Video
+              </p>
+
+              <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                Listen to the voice within yourself!
+              </h2>
+
+              <p className="text-lg text-[#e3e1c9]/80 max-w-md">
+                A short visual story created to feel, pause and reconnect with
+                your inner world.
+              </p>
+            </div>
+
+            <div className="relative">
+              <div className="absolute -inset-4 border border-[#e3e1c9]/30 rounded-[2rem] rotate-3" />
+              <div className="relative bg-[#e3e1c9]/15 backdrop-blur-md p-4 rounded-[2rem] shadow-2xl">
+                <video
+                  src="/videos/video1.mp4"
+                  controls
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full aspect-[9/12] object-cover rounded-[1.5rem]"
+                />
+              </div>
+            </div>
           </div>
         </section>
 
