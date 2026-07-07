@@ -45,7 +45,7 @@ const slides: Slide[] = [
     info: "Axı əzələ yandırmaq üçün idman zalları şərt deyil. Şəhərin özü sənin məşq meydanın ola bilər.",
   },
   {
-    title: "Saatlıq icarə verərək pul qazanmaq (batdı)",
+    title: "Saatlıq icarə verərək pul qazanmaq",
     info: "Sürmədiyin saatlarda velosiped işləsə necə olar? Yaxşı fikirdir, amma nəzərə almalısan ki, sektorda da yekamonlar çoxdur.",
   },
   {

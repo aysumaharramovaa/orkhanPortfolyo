@@ -86,7 +86,7 @@ export default function Portfolio() {
           <AparRide />
         </section>
 
-        
+
         </section>
         <section className="relative overflow-hidden bg-[#89986D] text-[#e3e1c9] py-20 px-6">
           <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#e3e1c9]/10 rounded-full blur-3xl" />
@@ -123,10 +123,6 @@ export default function Portfolio() {
               </div>
             </div>
           </div>
-        </section>
-
-        <section className="my-10">
-          <WorksPage />
         </section>
 
        
@@ -198,6 +194,10 @@ export default function Portfolio() {
 
         <section className="my-10">
           <Aviasales />
+        </section>
+
+          <section className="my-10">
+          <WorksPage />
         </section>
 
         <section className="my-10">
