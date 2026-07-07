@@ -68,9 +68,6 @@ export default function Portfolio() {
         </div>
 
         <section className="my-10 pt-5 bg-[#89986D]">
-          <h2 className="text-3xl text-[#e3e1c9] font-bold text-center mb-6">
-            Carousel Posts
-          </h2>
           <PostsGride />
         </section>
 

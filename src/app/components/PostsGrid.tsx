@@ -1,153 +1,90 @@
 "use client";
-
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const maraqImages = Array.from(
-  { length: 9 },
-  (_, i) => `/maraq${i || ""}.jpg`,
-);
-const rickmortyImages = Array.from(
-  { length: 9 },
-  (_, i) => `/rickmorty${i || ""}.jpg`,
-);
-const nostaljiImages = Array.from(
-  { length: 11 },
-  (_, i) => `/nostalji${i || ""}.jpg`,
-);
-const melanxoniyaImages = Array.from(
-  { length: 10 },
-  (_, i) => `/melanxoniya${i || ""}.jpg`,
-);
-const sebrImages = Array.from({ length: 10 }, (_, i) => `/sebr${i || ""}.jpg`);
-const dusunImages = Array.from({ length: 8 }, (_, i) => `/dusun${i || ""}.jpg`);
-const qorxuImages = Array.from(
-  { length: 11 },
-  (_, i) => `/qorxu${i || ""}.jpg`,
-);
+const posts = [
+  ["Maraq", Array.from({ length: 9 }, (_, i) => `/maraq${i || ""}.jpg`)],
+  [
+    "Rick & Morty",
+    Array.from({ length: 9 }, (_, i) => `/rickmorty${i || ""}.jpg`),
+  ],
+  ["Nostalji", Array.from({ length: 11 }, (_, i) => `/nostalji${i || ""}.jpg`)],
+  [
+    "Melanxoniya",
+    Array.from({ length: 10 }, (_, i) => `/melanxoniya${i || ""}.jpg`),
+  ],
+  ["South Park", Array.from({ length: 9 }, (_, i) => `/sp${i || ""}.jpg`)],
+  ["Sci-Fi", Array.from({ length: 11 }, (_, i) => `/sf${i || ""}.jpg`)],
+  ["Səbr", Array.from({ length: 10 }, (_, i) => `/sebr${i || ""}.jpg`)],
+  ["Düşün", Array.from({ length: 8 }, (_, i) => `/dusun${i || ""}.jpg`)],
+  ["Qorxu", Array.from({ length: 11 }, (_, i) => `/qorxu${i || ""}.jpg`)],
+  ["Fərqli", Array.from({ length: 9 }, (_, i) => `/ferqlii${i || ""}.jpg`)],
+] as const;
 
-const anImages = Array.from({ length: 10 }, (_, i) => `/an${i || ""}.jpg`);
-const neseImages = Array.from({ length: 10 }, (_, i) => `/nese${i || ""}.jpg`);
-const ferqliImages = Array.from(
-  { length: 9 },
-  (_, i) => `/ferqlii${i || ""}.jpg`,
-);
-const spImages = Array.from({ length: 9 }, (_, i) => `/sp${i || ""}.jpg`);
-const sfImages = Array.from({ length: 11 }, (_, i) => `/sf${i || ""}.jpg`);
-const dovsanImages = Array.from(
-  { length: 10 },
-  (_, i) => `/dovsan${i || ""}.jpg`,
-);
-const wrongImages = Array.from(
-  { length: 10 },
-  (_, i) => `/wrong${i || ""}.jpg`,
-);
-const santaImages = Array.from(
-  { length: 10 },
-  (_, i) => `/santa${i || ""}.jpg`,
-);
-const weekendImages = Array.from(
-  { length: 10 },
-  (_, i) => `/weekend${i || ""}.jpg`,
-);
-
-const Post = ({ images }: { images: string[] }) => {
-  const [currentImage, setCurrentImage] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
+export default function PostsHero() {
+  const [post, setPost] = useState(0);
+  const [slide, setSlide] = useState(0);
+  const imgs = posts[post][1];
+  useEffect(() => setSlide(0), [post]);
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (!isPaused) setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 2000);
-
-    return () => clearInterval(interval);
-  }, [isPaused, images.length]);
+    const t = setInterval(() => setSlide((v) => (v + 1) % imgs.length), 2200);
+    return () => clearInterval(t);
+  }, [imgs.length]);
 
   return (
-    <div className="post w-full relative rounded-lg cursor-pointer overflow-hidden">
-      <div
-        onClick={() => setIsPaused((p) => !p)}
-        className="relative w-full h-[500px]"
-      >
-        <Image
-          src={images[currentImage]}
-          alt="post image"
-          fill
-          className="object-cover rounded-lg transition-opacity duration-300"
-          priority
-        />
-      </div>
+    <section className="min-h-screen bg-[#89986D] py-10 px-5">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex justify-between items-end mb-6">
+          <div></div>
+          <p className="text-[#F7F4EA]">
+            {String(post + 1).padStart(2, "0")} / {posts.length}
+          </p>
+        </div>
 
-      <button
-        onClick={() =>
-          setCurrentImage((prev) => (prev - 1 + images.length) % images.length)
-        }
-        className="absolute top-1/2 left-2 -translate-y-1/2 bg-black bg-opacity-40 text-white p-2 rounded-full"
-      >
-        ◀
-      </button>
-      <button
-        onClick={() => setCurrentImage((prev) => (prev + 1) % images.length)}
-        className="absolute top-1/2 right-2 -translate-y-1/2 bg-black bg-opacity-40 text-white p-2 rounded-full"
-      >
-        ▶
-      </button>
-    </div>
+        <div className="relative h-[420px] md:h-[500px] w-full max-w-5xl mx-auto rounded-[28px] overflow-hidden shadow-2xl">
+          <div className="absolute inset-0 scale-110 blur-3xl opacity-20">
+            <Image src={imgs[slide]} alt="" fill className="object-cover" />
+          </div>
+          <Image
+            src={imgs[slide]}
+            alt=""
+            fill
+            className="object-contain relative z-10"
+          />
+          <button
+            onClick={() => setSlide((v) => (v - 1 + imgs.length) % imgs.length)}
+            className="absolute z-20 left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 text-white"
+          >
+            ‹
+          </button>
+          <button
+            onClick={() => setSlide((v) => (v + 1) % imgs.length)}
+            className="absolute z-20 right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 text-white"
+          >
+            ›
+          </button>
+        </div>
+
+        <div className="mt-6 flex justify-center gap-2 overflow-x-auto scrollbar-hide pb-2">
+          {posts.map((p, i) => (
+            <button
+              key={p[0]}
+              onClick={() => setPost(i)}
+              className={`flex-shrink-0 w-[90px] transition-all ${
+                i === post ? "scale-105" : "opacity-80 hover:opacity-100"
+              }`}
+            >
+              <div
+                className={`relative h-[120px] rounded-2xl overflow-hidden border ${
+                  i === post ? "border-[#F7F4EA]" : "border-white/10"
+                } bg-transparent`}
+              >
+                <Image src={p[1][0]} alt={p[0]} fill className="object-cover" />
+              </div>
+            </button>
+          ))}
+        </div>
+      </div>
+    </section>
   );
-};
-
-const PostsGrid = () => {
-  return (
-    <div className="flex flex-wrap gap-4 justify-center">
-      <div className="w-full sm:w-1/2 lg:w-1/4">
-        <Post images={maraqImages} />
-      </div>
-      <div className="w-full sm:w-1/2 lg:w-1/4">
-        <Post images={rickmortyImages} />
-      </div>
-      <div className="w-full sm:w-1/2 lg:w-1/4">
-        <Post images={nostaljiImages} />
-      </div>
-      <div className="w-full sm:w-1/2 lg:w-1/4">
-        <Post images={melanxoniyaImages} />
-      </div>
-      <div className="w-full sm:w-1/2 lg:w-1/4">
-        <Post images={spImages} />
-      </div>
-      <div className="w-full sm:w-1/2 lg:w-1/4">
-        <Post images={sfImages} />
-      </div>
-      <div className="w-full sm:w-1/2 lg:w-1/4">
-        <Post images={sebrImages} />
-      </div>
-      <div className="w-full sm:w-1/2 lg:w-1/4">
-        <Post images={dusunImages} />
-      </div>
-      <div className="w-full sm:w-1/2 lg:w-1/4">
-        <Post images={qorxuImages} />
-      </div>
-      <div className="w-full sm:w-1/2 lg:w-1/4">
-        <Post images={ferqliImages} />
-      </div>
-      <div className="w-full sm:w-1/2 lg:w-1/4">
-        <Post images={neseImages} />
-      </div>
-      <div className="w-full sm:w-1/2 lg:w-1/4">
-        <Post images={anImages} />
-      </div>
-      <div className="w-full sm:w-1/2 lg:w-1/4">
-        <Post images={dovsanImages} />
-      </div>
-      <div className="w-full sm:w-1/2 lg:w-1/4">
-        <Post images={wrongImages} />
-      </div>
-      <div className="w-full sm:w-1/2 lg:w-1/4">
-        <Post images={santaImages} />
-      </div>
-      <div className="w-full sm:w-1/2 lg:w-1/4">
-        <Post images={weekendImages} />
-      </div>
-    </div>
-  );
-};
-
-export default PostsGrid;
+}
