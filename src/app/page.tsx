@@ -135,28 +135,58 @@ export default function Portfolio() {
           <AparRide />
         </section>
 
-        <section className=" text-[#FDF5AA] py-10 px-4">
-          <h2 className="text-4xl font-bold mb-6 text-center">
-            How about getting to know the world of animation up close?
-          </h2>
+        <section className="relative overflow-hidden py-24 px-5 text-[#FDF5AA]">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#1f2a1b] via-[#89986D] to-[#3d4b2f]" />
 
-          <div className="max-w-[600px] mx-auto rounded-xl shadow-2xl overflow-hidden mb-6">
-            <video
-              src="/videos/animfilmi.mp4"
-              controls
-              className="w-full h-auto object-cover"
-            />
+          <div className="absolute top-10 left-8 text-[80px] md:text-[150px] font-black text-white/5 leading-none">
+            ANİMASİYA
           </div>
 
-          <div className="text-center">
-            <a
-              href="https://www.instagram.com/reel/DOS64BcjH8u/?utm_source=ig_web_copy_link&igsh=bWZ1cmN0d3pkZDZo"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-2 bg-[#e3e1c9] text-[#5c6d40] rounded-lg shadow hover:bg-[#c9c491] transition-all duration-300"
-            >
-              Instagram Link
-            </a>
+          <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-[#FDF5AA]/10 rounded-full blur-3xl" />
+          <div className="absolute -top-20 -left-20 w-80 h-80 bg-white/10 rounded-full blur-3xl" />
+
+          <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl md:text-6xl font-black leading-tight mb-6">
+                Animasiya dünyası ilə daha yaxından tanış olmağa nə
+                deyirsən?{" "}
+              </h2>
+
+              <p className="text-lg text-[#FDF5AA]/80 max-w-md leading-relaxed mb-8">
+                Partnyoru olduğumuz “ANIMAFILM Beynəlxalq Animasiya Festivalı”
+                səni unikal animasiya texnikalarını və bənzərsiz hekayələri kəşf
+                etməyə dəvət edir.{" "}
+              </p>
+
+              <a
+                href="https://www.instagram.com/reel/DOS64BcjH8u/?utm_source=ig_web_copy_link&igsh=bWZ1cmN0d3pkZDZo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-7 py-3 bg-[#FDF5AA] text-[#3d4b2f] rounded-full font-bold shadow-lg hover:scale-105 transition-all duration-300"
+              >
+            Instagram
+                <span>→</span>
+              </a>
+            </div>
+
+            <div className="relative">
+              <div className="absolute -inset-5 border border-[#FDF5AA]/30 rounded-[2rem] rotate-3" />
+              <div className="absolute -inset-5 border border-white/10 rounded-[2rem] -rotate-3" />
+
+              <div className="relative bg-white/10 backdrop-blur-md border border-white/20 rounded-[2rem] p-4 shadow-2xl">
+                <div className="flex gap-2 mb-4 px-2">
+                  <span className="w-3 h-3 rounded-full bg-[#FDF5AA]/80" />
+                  <span className="w-3 h-3 rounded-full bg-[#FDF5AA]/50" />
+                  <span className="w-3 h-3 rounded-full bg-[#FDF5AA]/30" />
+                </div>
+
+                <video
+                  src="/videos/animfilmi.mp4"
+                  controls
+                  className="w-full aspect-[9/12] object-cover rounded-[1.5rem]"
+                />
+              </div>
+            </div>
           </div>
         </section>
 
