@@ -4,21 +4,83 @@ import Image from "next/image";
 import { useState } from "react";
 
 const projects = [
-  //  {
-  //   id: ,
-  //   name: "",
-  //   instagramLink:
-  //     "",
-  //   imageUrl: "",
-  // },
-
+  {
+    id: 50,
+    name: "Bu həftənin gedilməli olan ən yaxşı tədbirlərini sizin üçün seçtik.",
+    instagramLink:
+      "https://www.instagram.com/p/DYokvsVjjIY/?igsh=aXQ5bG9pcjY3YTJv",
+    imageUrl: "/22may.jpg",
+  },
+  {
+    id: 49,
+    name: "Həftəsonuna rəng qatmağın tam zamanıdır!",
+    instagramLink:
+      "https://www.instagram.com/p/DY7ODCbjKwk/?igsh=bm94anl6MWNkMTBz",
+    imageUrl: "/30may.jpg",
+  },
+  {
+    id: 48,
+    name: "İyunun bənzərsiz ab-havasını hansı sənətçilərin performansları ilə qarşılaya bilərik?",
+    instagramLink:
+      "https://www.instagram.com/p/DZPKZRNjqXj/?igsh=MTEyeTg3c2c4enk5cw%3D%3D",
+    imageUrl: "/6konsert.jpg",
+  },
+  {
+    id: 47,
+    name: "Geridə qoyduğumuz musiqi həftəsi yerli pop səhnəsində sakit keçsə də, bir neçə sənətçi yeni relizlər ilə gündəmə düşməyi bacarıb.",
+    instagramLink:
+      "https://www.instagram.com/p/DZCySaODGD3/?igsh=MWhmZnRsNWZ4aTJucQ%3D%3D",
+    imageUrl: "/295.jpg",
+  },
+  {
+    id: 46,
+    name: "Həftəiçi yorğunluğunu unudaraq həftəsonu rejmini aktivləşdirməyə hazırsınız?",
+    instagramLink:
+      "https://www.instagram.com/p/DZxP-JIjLUm/?igsh=MTE3bHdjMm4xd3kyeQ%3D%3D",
+    imageUrl: "/21iyun.jpg",
+  },
+  {
+    id: 45,
+    name: "Qulaqlarımızı bu dəfə ötən həftə yayımlanan yeni relizlər ilə sevindirə bilərik!",
+    instagramLink:
+      "https://www.instagram.com/p/DZU2KhGDFj6/?igsh=b2ozbHlvZDN1cWZo",
+    imageUrl: "/ayaz.jpg",
+  },
+  {
+    id: 44,
+    name: "Bu ay kinoteatrlar nümayiş olunan yeni filmlərlə yay mövsümünün bütün həyəcanını və fərqli emosiyalarını böyük ekrana daşıyır!",
+    instagramLink:
+      "https://www.instagram.com/p/DaU32kEDsII/?igsh=MWdobHI5ODBlbG9xcw%3D%3D",
+    imageUrl: "/9iyul.jpg",
+  },
+  {
+    id: 43,
+    name: "İş günlərini geridə qoyub, həftəsonunun o azad və enerjili ab-havasına keçid etməyə tam hazırsınız?",
+    instagramLink:
+      "https://www.instagram.com/p/DaVLqapjogC/?igsh=MWM4cnMwNGJyaGg5Yg%3D%3D&img_index=1",
+    imageUrl: "/4iyul.jpg",
+  },
+  {
+    id: 42,
+    name: "Korporativ mühitdə ciddiyətlə boğulmuş insanların nə demək istədiyini anlamağa çalışdıq.",
+    instagramLink:
+      "https://www.instagram.com/p/DY6lQhaDlej/?img_index=1&igsh=cW41dGlkZGdwdzdv",
+    imageUrl: "/korporativ.jpg",
+  },
+  {
+    id: 41,
+    name: "Bu Yay Azı Bir Dəfə Etmək İstədiyimiz Şeylər",
+    instagramLink:
+      "https://www.instagram.com/p/DZW2BmmjiPz/?igsh=MWdmNW1yZzBiZjEzdQ%3D%3D&img_index=1",
+    imageUrl: "/yay.jpg",
+  },
   {
     id: 40,
     name: "Əslində olmayan, amma var kimi qəbul etdiyimiz şeylər",
-    instagramLink: "https://www.instagram.com/p/DVvfsu9DBPK/?igsh=MTJqZXMzYmpzbGs4bA%3D%3D",
+    instagramLink:
+      "https://www.instagram.com/p/DVvfsu9DBPK/?igsh=MTJqZXMzYmpzbGs4bA%3D%3D",
     imageUrl: "/eslindeolmayan.jpg",
   },
-
   {
     id: 39,
     name: "2026-da seçimlərinin arasındakı fərq",
@@ -26,7 +88,6 @@ const projects = [
       "https://www.instagram.com/p/DS_-W2TjKyp/?igsh=aHhhN3B0N2E2OGFl&img_index=1",
     imageUrl: "/secimlerim.jpg",
   },
-
   {
     id: 37,
     name: "Bu il səhv etdiyim şeylər",
@@ -50,7 +111,7 @@ const projects = [
   },
   {
     id: 34,
-    name: " Gen-Z dili və ədəbiyyatı",
+    name: "Gen-Z dili və ədəbiyyatı",
     instagramLink:
       "https://www.instagram.com/p/DW8W8ogjOXw/?img_index=2&igsh=MWt4em14czB6YWh3MA%3D%3D",
     imageUrl: "/genz.jpg",
@@ -153,7 +214,6 @@ const projects = [
       "https://www.instagram.com/p/DM2BaYbtGnL/?igsh=NTNpa2UxNTdvdWZl",
     imageUrl: "/kino.jpg",
   },
-
   {
     id: 7,
     name: "Vaxtında Qədrini Bilmədiyimiz Şeylər",
@@ -189,7 +249,6 @@ const projects = [
       "https://www.instagram.com/p/DKzJOrztb9B/?igsh=MXRwY256ODByYXVtbw%3D%3D",
     imageUrl: "/two.jpg",
   },
-
   {
     id: 12,
     name: "Artıq Eyni Zövqü Verməyən Şeylər",
@@ -197,7 +256,6 @@ const projects = [
       "https://www.instagram.com/p/DLmRX5eNE3C/?igsh=aGI2eDhpOTFjajBs&img_index=10",
     imageUrl: "/one.jpg",
   },
-
   {
     id: 13,
     name: "Ürəyində Nəsə Küsülüsən, Çünki...",
@@ -275,7 +333,6 @@ const projects = [
       "https://www.instagram.com/p/DOVedbqjBM7/?utm_source=ig_web_copy_link&igsh=MTVld283cm1iNzF1aw==",
     imageUrl: "/xerite.jpg",
   },
-
   {
     id: 24,
     name: "Həyatında NƏSƏ Sevgi Çatışmır, Çünki...",
@@ -299,10 +356,65 @@ const projects = [
   },
 ];
 
-export default function WorksPage() {
-  const [visibleCount, setVisibleCount] = useState(8);
+type Project = (typeof projects)[number];
 
-  const handleSeeMore = () => setVisibleCount((prev) => prev + 8);
+const projectMap = new Map(projects.map((project) => [project.id, project]));
+
+const getProjectsByIds = (ids: number[]) =>
+  ids
+    .map((id) => projectMap.get(id))
+    .filter((project): project is Project => Boolean(project));
+
+const INITIAL_VISIBLE_COUNT = 4;
+
+const projectGroups = [
+  {
+    title: "Weekend & Events",
+    projectIds: [49, 46, 14, 18, 50, 16, 48, 43],
+  },
+  {
+    title: "Movies • Series • YouTube",
+    projectIds: [1, 3, 28, 2, 4, 30, 31, 5, 20, 6, 17, 44],
+  },
+  {
+    title: "Music",
+    projectIds: [29, 45, 47, 16, 48],
+  },
+  {
+    title: "Lifestyle",
+    projectIds: [41, 10, 8, 25, 35, 36],
+  },
+  {
+    title: "Psychology & Self Growth",
+    projectIds: [24, 32, 13, 19, 23, 21, 22, 26, 7, 12],
+  },
+  {
+    title: "Relatable / Humor",
+    projectIds: [40, 42, 27, 33, 39, 37, 34, 11],
+  },
+  {
+    title: "Collaborations & Brand Works",
+    projectIds: [9, 15],
+  },
+  {
+    title: "Seasonal & Campaigns",
+    projectIds: [38],
+  },
+];
+
+export default function WorksPage() {
+  const [visibleCounts, setVisibleCounts] = useState<Record<string, number>>(
+    Object.fromEntries(
+      projectGroups.map((group) => [group.title, INITIAL_VISIBLE_COUNT])
+    )
+  );
+
+  const handleSeeMore = (groupTitle: string) => {
+    setVisibleCounts((prev) => ({
+      ...prev,
+      [groupTitle]: prev[groupTitle] + INITIAL_VISIBLE_COUNT,
+    }));
+  };
 
   return (
     <>
@@ -311,41 +423,60 @@ export default function WorksPage() {
       </h2>
 
       <section className="overflow-hidden py-10">
-        <div className="grid gap-6 px-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {projects.slice(0, visibleCount).map((project, i) => (
-            <a
-              key={project.id}
-              href={project.instagramLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-lg p-4 text-[#5c6d40] shadow-lg flex flex-col justify-between cursor-pointer transition-all duration-300 transform hover:scale-105 hover:rotate-1 hover:shadow-2xl animate-[scaleUp_0.6s_ease-out_forwards]"
-              style={{
-                backgroundColor: "#e3e1c9",
-                animationDelay: `${i * 0.15}s`,
-              }}
-            >
-              <Image
-                src={project.imageUrl}
-                alt={project.name}
-                width={250}
-                height={250}
-                className="rounded-md mb-4 w-full object-cover"
-              />
-              <p className="font-semibold">- {project.name}</p>
-            </a>
-          ))}
-        </div>
+        <div className="space-y-14 px-6">
+          {projectGroups.map((group) => {
+            const groupProjects = getProjectsByIds(group.projectIds);
+            const visibleProjects = groupProjects.slice(
+              0,
+              visibleCounts[group.title]
+            );
 
-        {visibleCount < projects.length && (
-          <div className="text-center mt-6">
-            <button
-              onClick={handleSeeMore}
-              className="px-6 py-2 bg-[#e3e1c9] text-[#5c6d40] rounded-lg shadow hover:bg-[#c9c491] transition-all duration-300"
-            >
-              See More
-            </button>
-          </div>
-        )}
+            return (
+              <div key={group.title}>
+                <h3 className="text-2xl text-[#e3e1c9] font-bold mb-6">
+                  {group.title}
+                </h3>
+
+                <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                  {visibleProjects.map((project, i) => (
+                    <a
+                      key={`${group.title}-${project.id}`}
+                      href={project.instagramLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-lg p-4 text-[#5c6d40] shadow-lg flex flex-col justify-between cursor-pointer transition-all duration-300 transform hover:scale-105 hover:rotate-1 hover:shadow-2xl animate-[scaleUp_0.6s_ease-out_forwards]"
+                      style={{
+                        backgroundColor: "#e3e1c9",
+                        animationDelay: `${i * 0.08}s`,
+                      }}
+                    >
+                      <Image
+                        src={project.imageUrl}
+                        alt={project.name}
+                        width={250}
+                        height={250}
+                        className="rounded-md mb-4 w-full object-cover"
+                      />
+
+                      <p className="font-semibold">- {project.name}</p>
+                    </a>
+                  ))}
+                </div>
+
+                {visibleCounts[group.title] < groupProjects.length && (
+                  <div className="text-center mt-6">
+                    <button
+                      onClick={() => handleSeeMore(group.title)}
+                      className="px-6 py-2 bg-[#e3e1c9] text-[#5c6d40] rounded-lg shadow hover:bg-[#c9c491] transition-all duration-300"
+                    >
+                      See More
+                    </button>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
 
         <style jsx>{`
           @keyframes scaleUp {
