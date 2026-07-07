@@ -9,6 +9,7 @@ import AparRide from "./components/AparRide";
 import ArkaPartaGallery from "./components/ArkaPartaGallery";
 import Aviasales from "./components/Aviasales";
 import VideoMemories from "./components/VideoMemories";
+import Emporium from "./components/Emporium";
 
 export default function Portfolio() {
   const [isPaused, setIsPaused] = useState(false);
@@ -84,6 +85,10 @@ export default function Portfolio() {
         </section>
 
         <section className="my-10">
+          <Emporium />
+        </section>
+        
+        <section className="my-10">
           <WorksPage />
         </section>
 
@@ -146,7 +151,7 @@ export default function Portfolio() {
       </div>
 
       <footer className="w-full py-6 text-center text-sm text-[#e3e1c9]">
-        © 2026 Orkhan Gurbanli. 
+        © 2026 Orkhan Gurbanli.
       </footer>
     </div>
   );
