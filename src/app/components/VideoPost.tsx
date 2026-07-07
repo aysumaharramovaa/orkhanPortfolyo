@@ -43,6 +43,18 @@ const post3Media = [
   "/yto8.mp4",
 ];
 
+const ziddiyyetler = [
+  "/ziddiyyetler.mp4",
+  "/ziddiyyetler1.mp4",
+  "/ziddiyyetler2.mp4",
+  "/ziddiyyetler3.mp4",
+  "/ziddiyyetler4.mp4",
+  "/ziddiyyetler5.mp4",
+  "/ziddiyyetler6.mp4",
+  "/ziddiyyetler7.mp4",
+  "/ziddiyyetler8.mp4",
+]
+
 const Post = ({ media }: { media: string[] }) => {
   const [current, setCurrent] = useState(0);
   const [displayed, setDisplayed] = useState(0); 
@@ -87,8 +99,7 @@ const Post = ({ media }: { media: string[] }) => {
   }, [displayed, isVideo]);
 
   return (
-    <div className="relative w-full h-[500px] rounded-lg overflow-hidden bg-black">
-
+<div className="relative w-full h-[300px] rounded-2xl overflow-hidden bg-black shadow-xl">
       <div
         onClick={() => setPaused((p) => !p)}
         className="w-full h-full cursor-pointer relative"
@@ -144,20 +155,28 @@ const Post = ({ media }: { media: string[] }) => {
 
 const VideosGrid = () => {
   return (
-    <div className="flex flex-wrap gap-6 justify-center">
-      <div className="w-full sm:w-1/2 lg:w-1/4">
-        <Post media={post1Media} />
-      </div>
+    <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="flex justify-center gap-5 overflow-x-auto pb-3">
+        <div className="w-[220px] flex-shrink-0">
+          <Post media={post1Media} />
+        </div>
 
-      <div className="w-full sm:w-1/2 lg:w-1/4">
-        <Post media={post2Media} />
-      </div>
+        <div className="w-[220px] flex-shrink-0">
+          <Post media={post2Media} />
+        </div>
 
-      <div className="w-full sm:w-1/2 lg:w-1/4">
-        <Post media={post3Media} />
+        <div className="w-[220px] flex-shrink-0">
+          <Post media={post3Media} />
+        </div>
+
+        <div className="w-[220px] flex-shrink-0">
+          <Post media={ziddiyyetler} />
+        </div>
       </div>
     </div>
   );
 };
 
 export default VideosGrid;
+
+
