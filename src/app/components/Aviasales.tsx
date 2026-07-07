@@ -1,7 +1,13 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Noto_Sans } from "next/font/google";
+
+const notoSans = Noto_Sans({
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
 
 type Slide = {
   title: string;
@@ -19,7 +25,7 @@ const slides1: Slide[] = [
   },
   {
     title: "Netflix gözləyə bilər, dəniz isə yox",
-    info: "İstirahət yalnız Netflix və yataq deyil. Özünü günəşin, dənizin və sükutun qucağına ataraq xoşbəxtliyə sadəcə bir bilet uzaqlığda ola bilərsən.",
+    info: "İstirahət yalnız Netflix və yataq deyil. Özünü günəşin, dənizin və sükutun qucağına ataraq xoşbəxtliyə sadəcə bir bilet uzaqlıqda ola bilərsən.",
   },
   {
     title: "Bəzən qohumları qısqandırmaq lazımdı",
@@ -51,61 +57,147 @@ const Carousel: React.FC = () => {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
 
+  const next = () => setCurrent((prev) => (prev + 1) % slides1.length);
+
+  const prev = () =>
+    setCurrent((prev) => (prev - 1 + slides1.length) % slides1.length);
+
   useEffect(() => {
+    if (paused) return;
+
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides1.length);
-    }, 7000);
+    }, 6500);
 
     return () => clearInterval(interval);
-  }, []);
-
-  const handleDotClick = (index: number) => {
-    setCurrent(index);
-    setPaused(true);
-  };
+  }, [paused]);
 
   return (
-    <section className="max-w-3xl mx-auto text-[#e3e1c9]">
-      <h2 className="text-4xl font-bold mb-8 text-center">
-        25TREND x Aviasales
-      </h2>
+    <section
+      className={`relative overflow-hidden py-24 px-5 text-[#e3e1c9] ${notoSans.className}`}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
+      <div className="absolute inset-0 bg-[#89986D]" />
 
-      <div className="relative w-full h-64 md:h-60 lg:h-72 overflow-hidden">
-        <AnimatePresence>
-          {slides1.map((slide, index) =>
-            index === current ? (
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute left-[8%] top-[20%] w-[80%] h-[1px] border-t border-dashed border-[#e3e1c9]" />
+        <div className="absolute left-[15%] top-[45%] w-[70%] h-[1px] border-t border-dashed border-[#e3e1c9]" />
+        <div className="absolute left-[25%] top-[70%] w-[60%] h-[1px] border-t border-dashed border-[#e3e1c9]" />
+      </div>
+
+      <div className="absolute top-8 right-8 text-[90px] md:text-[150px] font-black text-[#e3e1c9]/10 leading-none">
+        AVIA
+      </div>
+
+      <div className="relative z-10 max-w-6xl mx-auto">
+        <div className="text-center mb-14">
+          <p className="uppercase tracking-[0.35em] text-sm text-[#e3e1c9]/70 mb-4">
+            Travel Moodboard
+          </p>
+
+          <h2 className="text-4xl md:text-6xl font-black leading-tight">
+            25TREND x Aviasales
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-12 items-center">
+          <div className="relative">
+            <div className="absolute -top-6 -left-6 w-24 h-24 border border-[#e3e1c9]/30 rounded-full" />
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 border border-[#e3e1c9]/20 rounded-full" />
+
+            <AnimatePresence mode="wait">
               <motion.div
-                key={index}
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.8 }}
-                className="absolute w-full h-full p-6 rounded-lg shadow-lg cursor-pointer
-                           flex flex-col justify-center"
-                whileHover={{ scale: 1.03 }}
+                key={current}
+                initial={{ opacity: 0, scale: 0.92, y: 30 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.92, y: -30 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                className="relative bg-[#e3e1c9] text-[#3d4b2f] rounded-[3rem] p-8 md:p-12 shadow-2xl min-h-[420px] overflow-hidden"
               >
-                <h3 className="text-2xl text-[#F4F3EE] font-semibold mb-3">
-                  {slide.title}
-                </h3>
-               <p className="text-xl text-[#e3e1c9]">{slide.info}</p>
-              </motion.div>
-            ) : null
-          )}
-        </AnimatePresence>
+                <div className="absolute right-8 top-8 w-24 h-24 rounded-full border-2 border-dashed border-[#89986D]/40 flex items-center justify-center rotate-12">
+                  <span className="text-xs font-black uppercase text-center leading-tight">
+                    Travel <br /> Stamp
+                  </span>
+                </div>
 
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-          {slides1.map((_, i) => (
-            <button
-              key={i}
-              className={`w-3 h-3 rounded-full ${
-                i === current ? "bg-white" : "bg-[#9AAA7B]"
-              }`}
-              onClick={() => handleDotClick(i)}
-            />
-          ))}
+                <div className="mb-10">
+                  <span className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#89986D] text-[#e3e1c9] font-black mb-8">
+                    {String(current + 1).padStart(2, "0")}
+                  </span>
+
+                  <h3 className="text-3xl md:text-5xl font-black leading-tight max-w-2xl">
+                    {slides1[current].title}
+                  </h3>
+                </div>
+
+                <p className="text-lg md:text-xl leading-relaxed max-w-3xl">
+                  {slides1[current].info}
+                </p>
+
+                <div className="flex items-center justify-between mt-12">
+                  <button
+                    onClick={() => {
+                      setPaused(true);
+                      prev();
+                    }}
+                    className="px-5 py-3 rounded-full border border-[#89986D]/40 hover:bg-[#89986D] hover:text-[#e3e1c9] transition"
+                  >
+                    ← Previous
+                  </button>
+
+                  <button
+                    onClick={() => {
+                      setPaused(true);
+                      next();
+                    }}
+                    className="px-5 py-3 rounded-full bg-[#89986D] text-[#e3e1c9] hover:scale-105 transition"
+                  >
+                    Next →
+                  </button>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          <div className="grid grid-cols-3 gap-4">
+            {slides1.map((slide, i) => (
+              <button
+                key={slide.title}
+                onClick={() => {
+                  setPaused(true);
+                  setCurrent(i);
+                }}
+                className={`aspect-square rounded-full border-2 border-dashed p-3 text-center transition-all duration-300 flex flex-col items-center justify-center ${
+                  i === current
+                    ? "bg-[#e3e1c9] text-[#3d4b2f] border-[#e3e1c9] scale-105 shadow-2xl"
+                    : "bg-white/10 text-[#e3e1c9] border-[#e3e1c9]/35 hover:bg-white/20"
+                }`}
+              >
+                <span className="text-xs font-black mb-1">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+
+                <span className="text-[11px] md:text-xs font-bold leading-tight line-clamp-3">
+                  {slide.title}
+                </span>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-12 h-1 bg-[#e3e1c9]/20 rounded-full overflow-hidden">
+          <motion.div
+            key={current}
+            initial={{ width: "0%" }}
+            animate={{ width: "100%" }}
+            transition={{ duration: 6.5, ease: "linear" }}
+            className="h-full bg-[#e3e1c9]"
+          />
         </div>
       </div>
     </section>
   );
 };
+
 export default Carousel;

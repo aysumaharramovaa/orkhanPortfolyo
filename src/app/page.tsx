@@ -72,13 +72,6 @@ export default function Portfolio() {
         </section>
 
         <section className="my-10">
-          <h2 className="text-3xl  text-[#e3e1c9] font-bold text-center mb-6">
-            Video Carousel Posts
-          </h2>
-          <VideosGrid />
-        </section>
-
-        <section className="my-10">
           <CollabWorks />
         </section>
 
@@ -88,12 +81,13 @@ export default function Portfolio() {
 
         <section className="my-10">
           <Hansiyerlifilm />
+
+           <section className="my-10">
+          <AparRide />
         </section>
 
-        <section className="my-10">
-          <WorksPage />
+        
         </section>
-
         <section className="relative overflow-hidden bg-[#89986D] text-[#e3e1c9] py-20 px-6">
           <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#e3e1c9]/10 rounded-full blur-3xl" />
           <div className="absolute -bottom-24 -right-24 w-72 h-72 bg-[#e3e1c9]/10 rounded-full blur-3xl" />
@@ -132,7 +126,15 @@ export default function Portfolio() {
         </section>
 
         <section className="my-10">
-          <AparRide />
+          <WorksPage />
+        </section>
+
+       
+        <section className="my-10">
+          <h2 className="text-3xl  text-[#e3e1c9] font-bold text-center mb-6">
+            Video Carousel Posts
+          </h2>
+          <VideosGrid />
         </section>
 
         <section className="relative overflow-hidden py-24 px-5 text-[#FDF5AA]">
@@ -164,7 +166,7 @@ export default function Portfolio() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-7 py-3 bg-[#FDF5AA] text-[#3d4b2f] rounded-full font-bold shadow-lg hover:scale-105 transition-all duration-300"
               >
-            Instagram
+                Instagram
                 <span>→</span>
               </a>
             </div>
