@@ -5,6 +5,27 @@ import { useState } from "react";
 
 const projects = [
   {
+    id: 53,
+    name: "Avqust da bitdi, deməli, içimizdə qalanları ortaya tökməyin tam vaxtıdır!",
+    instagramLink:
+      "https://www.instagram.com/p/DcvN0OhDjGX/?stkn=MWIyZWRyajF0ajQweQ%3D%3D&img_index=1",
+    imageUrl: "/sabahfk.jpg",
+  },
+   {
+    id: 52,
+    name: "Bəzi səhvlər həyatımızı dəyişmək üçün qarşımıza çıxır. ",
+    instagramLink:
+      "https://www.instagram.com/p/DcqASnTjiik/?stkn=MmhtdWRwcGNneWw0&img_index=1",
+    imageUrl: "/heyatcetinolasada.jpg",
+  },
+  {
+    id: 51,
+    name: "Bəs onlar bizi qızarmış toyuğa çevirən istilərlə necə yola gedir? ",
+    instagramLink:
+      "https://www.instagram.com/p/DasBClNjteg/?stkn=eW52NWo4aWsyMDRv&img_index=1",
+    imageUrl: "/yaydaharagedek.jpg",
+  },
+  {
     id: 50,
     name: "Bu həftənin gedilməli olan ən yaxşı tədbirlərini sizin üçün seçtik.",
     instagramLink:
@@ -382,11 +403,11 @@ const projectGroups = [
   },
   {
     title: "Lifestyle",
-    projectIds: [41, 10, 8, 25, 35, 36],
+    projectIds: [51, 41, 10, 8, 25, 35, 36],
   },
   {
     title: "Psychology & Self Growth",
-    projectIds: [24, 32, 13, 19, 23, 21, 22, 26, 7, 12],
+    projectIds: [53, 52, 24, 32, 13, 19, 23, 21, 22, 26, 7, 12],
   },
   {
     title: "Relatable / Humor",

@@ -61,6 +61,13 @@ const collabs = [
     link: "https://www.instagram.com/reel/DR4B8eljNc-/?igsh=MWF1ajlxbWpscmI0bA==",
     className: "",
   },
+  {
+    src: "/magnum.jpeg",
+    alt: "Magnum Collaboration",
+    link: "https://www.instagram.com/p/DdmDZRcjMxv/?img_index=1",
+    className: "md:col-span-1 md:row-span-2",
+    position: "object-[center_10%]",
+  },
 ];
 
 export default function CollabBento() {
@@ -98,7 +105,9 @@ export default function CollabBento() {
               src={item.src}
               alt={item.alt}
               fill
-              className="object-cover transition duration-700 group-hover:scale-110"
+              className={`object-cover transition duration-700 group-hover:scale-110 ${
+                item.position || ""
+              }`}
             />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-80 group-hover:opacity-100 transition" />
