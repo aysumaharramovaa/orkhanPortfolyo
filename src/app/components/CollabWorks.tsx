@@ -37,14 +37,14 @@ const collabs = [
     link: "https://www.instagram.com/p/DIoN54BNIDo/?igsh=MWFtMHBnbTZkZzZrMQ==",
     className: "",
   },
-  
+
   {
     src: "/collab6.jpg",
     alt: "Collab 6",
     link: "https://www.instagram.com/p/DIf8ApONxdo/?igsh=MThzY2V0eXA1ZjUxbw==",
     className: "",
   },
-   {
+  {
     src: "/magnum.jpeg",
     alt: "Magnum Collaboration",
     link: "https://www.instagram.com/p/DdmDZRcjMxv/?img_index=1",
@@ -58,7 +58,7 @@ const collabs = [
     className: "md:col-span-2 md:row-span-2",
     position: "object-[center_10%]",
   },
-   {
+  {
     src: "/medidapa2.jpg",
     alt: "Media Partner",
     link: "https://www.instagram.com/p/DYPZzeOMrGG/?stkn=MWR2a2t6MjM5c2o1dg%3D%3D",
@@ -75,7 +75,7 @@ const collabs = [
     src: "/collab8.jpeg",
     alt: "Collab 8",
     link: "https://www.instagram.com/reel/DSmTFo5jTjE/?igsh=MWo0cW1jb3RmY2N5ag==",
-    className: "md:col-span-2",
+     className: "md:col-span-1 md:row-span-1",
   },
   {
     src: "/collab9.jpeg",
@@ -83,7 +83,13 @@ const collabs = [
     link: "https://www.instagram.com/reel/DR4B8eljNc-/?igsh=MWF1ajlxbWpscmI0bA==",
     className: "",
   },
-
+ {
+    src: "/qurbanqurbanov.jpg",
+    alt: "Qurban Qurbanov",
+    link: "https://www.instagram.com/p/DPRuaN5DGlQ/?utm_source=ig_web_copy_link&igsh=MWNzZW1hZm1jZmticg==",
+    className: "md:col-span-1 md:row-span-1",
+    position: "object-[center_10%]",  
+  },
 ];
 
 export default function CollabBento() {

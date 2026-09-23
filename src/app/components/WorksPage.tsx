@@ -250,13 +250,6 @@ const projects = [
     imageUrl: "/four.jpg",
   },
   {
-    id: 9,
-    name: "25trend & DIV Academy",
-    instagramLink:
-      "https://www.instagram.com/p/DLovQrftcJg/?igsh=MTgzdDBoczJieG9ibg%3D%3D",
-    imageUrl: "/five.jpg",
-  },
-  {
     id: 10,
     name: "Qızmar Günlərdə Həyat Qurtaran Şeylər",
     instagramLink:
@@ -290,13 +283,6 @@ const projects = [
     instagramLink:
       "https://www.instagram.com/p/DPTZKt1DD9x/?utm_source=ig_web_copy_link&igsh=MXJ0eXppZ2Z4ejVueA==",
     imageUrl: "/harda.jpg",
-  },
-  {
-    id: 15,
-    name: "Qurban Qurbanov",
-    instagramLink:
-      "https://www.instagram.com/p/DPRuaN5DGlQ/?utm_source=ig_web_copy_link&igsh=MWNzZW1hZm1jZmticg==",
-    imageUrl: "/qurbanqurbanov.jpg",
   },
   {
     id: 16,
@@ -412,10 +398,6 @@ const projectGroups = [
   {
     title: "Relatable / Humor",
     projectIds: [40, 42, 27, 33, 39, 37, 34, 11],
-  },
-  {
-    title: "Collaborations & Brand Works",
-    projectIds: [9, 15],
   },
   {
     title: "Seasonal & Campaigns",
