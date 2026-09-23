@@ -82,11 +82,9 @@ export default function Portfolio() {
         <section className="my-10">
           <Hansiyerlifilm />
 
-           <section className="my-10">
-          <AparRide />
-        </section>
-
-
+          <section className="my-10">
+            <AparRide />
+          </section>
         </section>
         <section className="relative overflow-hidden bg-[#89986D] text-[#e3e1c9] py-20 px-6">
           <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#e3e1c9]/10 rounded-full blur-3xl" />
@@ -125,7 +123,6 @@ export default function Portfolio() {
           </div>
         </section>
 
-       
         <section className="my-10">
           <h2 className="text-3xl  text-[#e3e1c9] font-bold text-center mb-6">
             Video Carousel Posts
@@ -133,6 +130,7 @@ export default function Portfolio() {
           <VideosGrid />
         </section>
 
+        {/* animasiya dunyasi */}
         <section className="relative overflow-hidden py-24 px-5 text-[#FDF5AA]">
           <div className="absolute inset-0 bg-gradient-to-br from-[#1f2a1b] via-[#89986D] to-[#3d4b2f]" />
 
@@ -194,9 +192,52 @@ export default function Portfolio() {
 
         <section className="my-10">
           <Aviasales />
+
+          {/* daxilihuzurunuqoru */}
+        </section>
+        <section className="relative overflow-hidden py-24 px-5 text-[#FDF5AA]">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#1f2a1b] via-[#89986D] to-[#3d4b2f]" />
+          <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-[#FDF5AA]/10 rounded-full blur-3xl" />
+          <div className="absolute -top-20 -left-20 w-80 h-80 bg-white/10 rounded-full blur-3xl" />
+
+          <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl md:text-6xl font-black leading-tight mb-6 font-['Montserrat']">
+                Daxili hüzurunu qoru və fərqində ol!
+              </h2>
+              <a
+                href="https://www.instagram.com/reels/DcNyZsYOkkN/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-7 py-3 bg-[#FDF5AA] text-[#3d4b2f] rounded-full font-bold shadow-lg hover:scale-105 transition-all duration-300"
+              >
+                Instagram
+                <span>→</span>
+              </a>
+            </div>
+
+            <div className="relative flex justify-center">
+  <div className="absolute -inset-5 border border-[#FDF5AA]/30 rounded-[2rem] rotate-3" />
+  <div className="absolute -inset-5 border border-white/10 rounded-[2rem] -rotate-3" />
+
+  <div className="relative bg-white/10 backdrop-blur-md border border-white/20 rounded-[2rem] p-4 shadow-2xl w-fit">
+    <div className="flex gap-2 mb-4 px-2">
+      <span className="w-3 h-3 rounded-full bg-[#FDF5AA]/80" />
+      <span className="w-3 h-3 rounded-full bg-[#FDF5AA]/50" />
+      <span className="w-3 h-3 rounded-full bg-[#FDF5AA]/30" />
+    </div>
+
+    <video
+      src="/videos/colej.mp4"
+      controls
+      className="w-[220px] md:w-[350px] aspect-[9/12] object-cover rounded-[1.5rem]"
+    />
+  </div>
+</div>
+          </div>
         </section>
 
-          <section className="my-10">
+        <section className="my-10">
           <WorksPage />
         </section>
 
