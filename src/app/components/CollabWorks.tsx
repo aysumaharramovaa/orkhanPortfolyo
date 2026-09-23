@@ -37,11 +37,33 @@ const collabs = [
     link: "https://www.instagram.com/p/DIoN54BNIDo/?igsh=MWFtMHBnbTZkZzZrMQ==",
     className: "",
   },
+  
   {
     src: "/collab6.jpg",
     alt: "Collab 6",
     link: "https://www.instagram.com/p/DIf8ApONxdo/?igsh=MThzY2V0eXA1ZjUxbw==",
     className: "",
+  },
+   {
+    src: "/magnum.jpeg",
+    alt: "Magnum Collaboration",
+    link: "https://www.instagram.com/p/DdmDZRcjMxv/?img_index=1",
+    className: "md:col-span-1 md:row-span-2",
+    position: "object-[center_10%]",
+  },
+  {
+    src: "/mediapartner.jpg",
+    alt: "Media Partner",
+    link: "https://www.instagram.com/p/Dcn1v27M8x9/?stkn=eDV1bTVjYmRoOWpr",
+    className: "md:col-span-2 md:row-span-2",
+    position: "object-[center_10%]",
+  },
+   {
+    src: "/medidapa2.jpg",
+    alt: "Media Partner",
+    link: "https://www.instagram.com/p/DYPZzeOMrGG/?stkn=MWR2a2t6MjM5c2o1dg%3D%3D",
+    className: "md:col-span-1 md:row-span-2",
+    position: "object-[center_10%]",
   },
   {
     src: "/collab7.jpg",
@@ -61,13 +83,7 @@ const collabs = [
     link: "https://www.instagram.com/reel/DR4B8eljNc-/?igsh=MWF1ajlxbWpscmI0bA==",
     className: "",
   },
-  {
-    src: "/magnum.jpeg",
-    alt: "Magnum Collaboration",
-    link: "https://www.instagram.com/p/DdmDZRcjMxv/?img_index=1",
-    className: "md:col-span-1 md:row-span-2",
-    position: "object-[center_10%]",
-  },
+
 ];
 
 export default function CollabBento() {
